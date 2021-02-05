@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "fcc-survey-form",
   "version": "1.0.0",
-  "description": "template",
+  "description": "FCC Project - Survey Form",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
