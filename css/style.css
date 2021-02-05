@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 3rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: [head-start] 80vh [head-end full-start] min-content [stats-end] min-content [content-start] min-content [content-end image-start] 1fr [image-end] min-content [foot-start] min-content [full-end]; }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(250rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.header {
+  background-color: #aaa;
+  grid-column: 1 / span 10;
+  grid-row: head-start / head-end;
+  height: 80vh;
+  background-image: url(../img/Senna.png);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  @media only screen and (max-width: 62.5em) {
+    .header {
+      background-position: 20% 0; } }
+  @media only screen and (max-width: 50em) {
+    .header {
+      background-position: 30% 0; } }
+  .header__text {
+    color: white; }
+    .header__text--main {
+      display: block;
+      font-size: 6rem;
+      color: #f7c413;
+      position: absolute;
+      top: 2.5rem;
+      left: 3rem;
+      backface-visibility: hidden;
+      animation-name: moveInRight;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards; }
+    .header__text--sub {
+      display: block;
+      font-size: 12rem;
+      color: #01a850;
+      position: absolute;
+      top: 5rem;
+      left: 10rem;
+      backface-visibility: hidden;
+      animation-name: moveInRight;
+      animation-delay: 0.5s;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards; }
+  .header__caption {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #ffffff;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem; }
+    .header__caption a:link {
+      color: #ffffff;
+      background-color: transparent;
+      text-decoration: none; }
+    .header__caption a:visited {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: none; }
+    .header__caption a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline; }
+    .header__caption a:active {
+      color: #ffffff;
+      background-color: transparent;
+      text-decoration: underline; }
+
+.stats {
+  grid-row: full-start / stats-end;
+  grid-column: 2 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 0;
+  text-align: center;
+  font-weight: 400; }
+  @media only screen and (max-width: 62.5em) {
+    .stats {
+      font-size: 3; } }
+  .stats__1 {
+    color: #f7c413; }
+    .stats__1--num {
+      font-size: 5rem; }
+    .stats__1--text {
+      font-size: 3.5rem; }
+  .stats__2 {
+    color: #01a850;
+    color: #01a850; }
+    .stats__2--num {
+      font-size: 5rem; }
+    .stats__2--text {
+      font-size: 3.5rem; }
+  .stats__3 {
+    color: #f7c413; }
+    .stats__3--num {
+      font-size: 5rem; }
+    .stats__3--text {
+      font-size: 3.5rem; }
+  .stats__4 {
+    color: #01a850; }
+    .stats__4--num {
+      font-size: 5rem; }
+    .stats__4--text {
+      font-size: 3.5rem; }
+
+.intro {
+  grid-column: 2 / 10;
+  grid-row: stats-end / content-start;
+  padding: 5rem 0;
+  font-size: 3rem;
+  text-align: center; }
+
+.timeline {
+  grid-column: 3 / 9;
+  grid-row: content-start / content-end;
+  display: block;
+  justify-content: center;
+  /*
+	&__event {
+		:hover {
+			transform: scale(1.025);
+			transition: all 1s ease-out;
+		}
+	}
+	*/ }
+  .timeline__year {
+    font-size: 1.5rem;
+    font-weight: 400; }
+  .timeline__description {
+    font-size: 1.5rem;
+    font-weight: 400; }
+  .timeline__content {
+    font-size: 1.5rem;
+    padding: 1.5rem 0 4rem 0; }
+
+.img-div {
+  grid-column: 1 / -1;
+  grid-row: image-start / image-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .img-div__img {
+    max-width: 100vw; }
+  .img-div__caption {
+    align-self: center; }
+
+.tribute-link {
+  font-size: 2rem;
+  grid-column: 1 / -1;
+  grid-row: image-end / foot-start;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0; }
+
+.footer {
+  font-size: 1.3rem;
+  grid-column: 1 / -1;
+  grid-row: foot-start / full-end;
+  display: grid;
+  justify-content: center; }

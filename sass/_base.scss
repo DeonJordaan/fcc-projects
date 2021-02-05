@@ -1,0 +1,64 @@
+//COLORS
+
+$color-yellow: #f7c413;
+$color-green: #01a850;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+//RESPONSIVE BREAKPOINTS
+$bp-huge: 75em; //  1200px
+$bp-lrg: 62.5em; //  1000px
+$bp-med: 50em; //  800px
+$bp-sml: 37.5em; //  600px
+
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+}
+
+html {
+	//This defines what 1rem is
+	font-size: 62.5%;
+
+	@media only screen and (max-width: $bp-huge) {
+		font-size: 50%;
+	}
+
+	@media only screen and (max-width: $bp-lrg) {
+		font-size: 37.5%;
+	}
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
+	box-sizing: border-box;
+	padding: 3rem;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: [head-start] 80vh [head-end full-start] min-content [stats-end] min-content [content-start] min-content [content-end image-start] 1fr [image-end] min-content [foot-start] min-content [full-end];
+}
+
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(250rem);
+	}
+
+	80% {
+		transform: translateX(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
