@@ -1,19 +1,107 @@
 html {
-  font-size: 62.5%;
-  /*
-	@include respond(tab-land) {
-		font-size: 56.25%; //1rem = 9px, 9 / 16 = 56.25%
-	}
-
-	@include respond(tab-port) {
-		font-size: 50%; //1rem = 8px, 8 / 16 = 50%
-	}
-
-	@include respond(big-desktop) {
-		font-size: 75%; //1rem = 12px, 12 / 16 = 75%
-	}
-    */ }
+  font-size: 62.5%; }
 
 body {
+  font-family: "Source Code Pro", monospace;
   box-sizing: border-box;
   padding: 3rem; }
+
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.header {
+  font-size: 3rem;
+  color: black; }
+
+.quote {
+  text-align: center;
+  color: black; }
+  .quote-text {
+    font-size: 2rem; }
+  .quote-from {
+    padding-bottom: 2rem; }
+
+.recommend {
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.5rem; }
+  .recommend__box {
+    border: 1px solid #999;
+    color: #a9a0a0;
+    font-family: inherit; }
+
+.h2 {
+  font-size: 3rem; }
+
+.questions__head {
+  padding-top: 2rem; }
+
+.comments {
+  font-size: 1.5rem;
+  font-family: inherit; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 1000px;
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 1em;
+  background-color: lightgrey; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+form li + li {
+  margin-top: 1em; }
+
+label {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 2rem;
+  transform: translateX(0.35rem); }
+
+input {
+  font-size: 1.5rem;
+  color: #a9a0a0;
+  font-family: inherit;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid #999; }
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid #999; }
+
+input:focus,
+textarea:focus {
+  border: 1px solid #999; }
+
+textarea {
+  vertical-align: top;
+  height: 5em; }
+
+.favorite {
+  padding-top: 3rem; }
+
+.button {
+  padding-left: 90px; }
+
+button {
+  margin-left: 0.5em; }

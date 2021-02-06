@@ -6,10 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="shortcut icon" type="image/png" href="img/bicycle-outline.svg" />
@@ -18,13 +15,136 @@
 	</head>
 	<body id="main" class="container">
 		<header class="header">
-			<h1 class="header">The Cycling Survey</h1>
+			<h1 id="title" class="header">The Cycling Survey</h1>
 		</header>
-		<h2 class="intro">
-			"Savour the accidental beauty of life in whatever small portions are dished out to you.
-			And ask not why you ride. Ask why you don't ride more" Mike Ferrentino, BIKE Magazine
-			(some time in the 90's)
+		<section class="quote">
+			<p class="quote-text">"Savour the accidental beauty of life in whatever small portions are dished out to you. And ask not why you ride. Ask why you don't ride
+				more"</p>
+			<p class="quote-from">Mike Ferrentino, BIKE Magazine (some time in the 90's)</p>
+		</section>
+		
 		</h2>
+		<form action="/my-handling-form-page" method="post">
+			<section>
+				<h2 class="contact">Contact Information:</h2>
+				<ul>
+					<!--<p>
+						<label for="name">
+							<span>Name: </span>
+							<strong><abbr title="required">*</abbr></strong>
+						</label>
+						<input type="text" id="name" name="username" />
+					</p>-->
+					<li>
+						<label for="first name">First name:</label>
+						<input type="text" name="user_name" id="first name" placeholder="First name" />
+					</li>
+					<li>
+						<label for="last name">Last name:</label>
+						<input type="text" name="user_name" id="last name" placeholder="Last name" />
+					</li>
+					<li>
+						<label for="age">Age:</label>
+						<input type="number" name="age" id="age" placeholder="Age" />
+					</li>
+					<li>
+						<label for="location">Location:</label>
+						<input type="text" name="location" id="location" placeholder="Location" />
+					</li>
+
+					<li>
+						<label for="mail">E-mail:</label>
+						<input type="email" name="user_email" id="mail" placeholder="Email" />
+					</li>
+					<section class="questions">
+						<h2 class="questions__head">What we'd like to know:</h2>
+						<li>
+							<label for="how-long">How many years have you been riding?</label>
+							<input type="number" name="how-long" id="how-long" placeholder="It's been a while, eh?" />
+						</li>
+						<li>
+							<label for="how-often">How many times do you ride in a given week?</label>
+							<input type="number" name="how-often" id="how-often" placeholder="One, two, three..." />
+						</li>
+						<li>
+							<label for="main">What is your main purpose of riding?</label>
+							<input type="text" name="main" id="main" placeholder="Even if you don't NEED a good reason!" />
+						</li>
+						<li>
+							<label for="favorite">What is your favorite type of cycling?</label>
+							<input type="text" name="favorite" id="favorite" placeholder="Only one please" />
+						</li>
+						<li>
+							<label for="why">Why do you ride? (We know we said you shouldn't ask, but we'd like to know, ok?)</label>
+							<input type="text" name="why" id="why" placeholder="The big reason!" />
+						</li>
+						<li>
+							<label for="what">What inspired you to start riding?</label>
+							<input type="text" name="what" id="what" placeholder="Let's get philisophical" />
+						</li>
+						<li>
+							<label for="how-many">How many bikes do you own?</label>
+							<input type="number" name="how-many" id="how-many" placeholder="N" />
+						</li>
+						<li>
+							<label for="how-much">Does your sigificant other know what they are really worth?</label>
+							<input type="password" name="how-much" id="how-much" placeholder="Our lips are sealed (Y/N)" />
+						</li>
+						<li>
+							<label for="comments">Additional Comments:</label>
+							<textarea class="comments" name="user_message" id="msg" placeholder="Tell us how you really feel!"></textarea>
+						</li>
+					</section>
+					<section class="recommend">
+						<p>How likely are you to recommend cycling to a friend?</p>
+						<select class="recommend recommend__box" id="recommend" name="recommend">
+							<option disabled selected>Would you?</option>
+							<option>No way, it sucks</option>
+							<option>Not really</option>
+							<option>It's possible</option>
+							<option>Probably would</option>
+							<option>Yeah, definitly</option>
+							<option>They're about to block me</option>
+						</select>
+					</section>
+				</ul>
+				<fieldset class="favorite">
+					<legend>What is your favored cycling discipline?</legend>
+					<p><input type="checkbox" id="commuting" name="commuting" value="commuting" />Commuting</p>
+					<p><input type="checkbox" id="road" name="road" value="road" />Road</p>
+					<p><input type="checkbox" id="track" name="track" value="track" />Track</p>
+					<p><input type="checkbox" id="gravel" name="gravel" value="gravel" />Gravel</p>
+					<p><input type="checkbox" id="mountainbiking" name="mountainbiking" value="mountainbiking" />Mountainbiking</p>
+					<p><input type="checkbox" id="cross-country" name="cross-country" value="cross-country" />Cross-Country</p>
+					<p><input type="checkbox" id="marathon" name="marathon" value="marathon" />Marathon</p>
+					<p><input type="checkbox" id="enduro" name="enduro" value="enduro" />Enduro</p>
+					<p><input type="checkbox" id="gravity" name="gravity" value="gravity" />Gravity</p>
+					<p><input type="checkbox" id="bikepacking" name="bikepacking" value="bikepacking" />Bikepacking</p>
+					<p><input type="checkbox" id="touring" name="touring" value="touring" />Touring</p>
+				</fieldset>
+
+				<fieldset class="reason">
+					<legend>What is your main reason for riding?</legend>
+					<p>
+						<input type="radio" name="reason" id="reason_1" value="recreational" />
+						<label for="reason_1">Recreational</label>
+					</p>
+					<p>
+						<input type="radio" name="reason" id="reason_2" value="exercise" />
+						<label for="reason_2">Exercise</label>
+					</p>
+					<p>
+						<input type="radio" name="reason" id="reason_3" value="commuting" />
+						<label for="reason_3">Commuting</label>
+					</p>
+				</fieldset>
+				
+
+				<li class="button">
+					<button type="submit">LET US HAVE IT!</button>
+				</li>
+			</section>
+		</form>
 
 		<footer class="footer"></footer>
 	</body>
