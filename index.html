@@ -6,20 +6,121 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet" />
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="img/ayrton-senna-helmet-vector.png" />
 
-		<title id="title">Ayrton Senna - Formula 1's greatest champion</title>
+		<title id="title">Articulate Furniture</title>
 	</head>
 	<body id="main" class="container">
-		<header class="header"></header>
+		<header id="header" class="header">
+			<div class="header__top">
+				<div class="header__main">
+					<h1 class="header__main--logo">Articulate Furniture</h1>
+					<h2 class="header__main--definition">a(r)'tik-yu-lut/ to express with clarity & effectiveness</h2>
+				</div>
+				<nav class="header__nav">
+					<div class="header__nav--item">
+						<a href="#" class="header__nav--link">
+							<span>Gallery</span>
+						</a>
+					</div>
+					<div class="header__nav--item">
+						<a href="#" class="header__nav--link">
+							<span>About</span>
+						</a>
+					</div>
+					<div class="header__nav--item">
+						<a href="#" class="header__nav--link">
+							<span>Contact</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="header__img">
+				<img src="/img/Website Landing Page.jpg" alt="tables" id="header-img" class="header-img" />
+			</div>
+		</header>
+		<div class="about">
+			<h2 class="about__heading">About</h2>
+			<p class="about__text">
+				Good design has long captivated me. Most of my career was spent working in the steel manufacturing industry producing and selling
+				hundreds of thousands of products for the construction industry. As is often the case with mass-produced goods of a purely functional
+				nature, the most important requirements were firstly that they were fit for purpose and secondly that they be as cheap as possible.
+			</p>
+			<p class="about__text">
+				Designing something down to a cost is not an environment well-suited to someone who loves to create. I’ve learned that anything we
+				dream up and create and give meaning to contains a small part of ourselves. Putting it out into the world is like bringing an offering
+				and I consider it a privilege.
+			</p>
+			<p class="about__text">
+				I firmly believe that simplicity & minimalism is the key to good design. Clean, honest and subtle pieces are my aim. Done well, these
+				will transcend time and when all the current fads & fashions are long gone and forgotten, will still be relevant and, more
+				importantly, significant.
+			</p>
+			<p class="about__text">My hope is to design pieces that are seen as such. <br /></p>
+			<p class="about__text">- Deon Jordaan -</p>
+		</div>
+		<section class="gallery">
+			<figure class="gallery__item gallery__item--1">
+				<img src="/img/Table 01 (11).jpg" alt="Gallery image 1" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--2">
+				<img src="/img/Table 06 (1).jpg" alt="Gallery image 2" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--3">
+				<img src="img/Table 01 (3).jpg" alt="Gallery image 3" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--4">
+				<img src="/img/rnd (4).jpg" alt="Gallery image 4" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--5">
+				<img src="/img/hex (5).jpg" alt="Gallery image 5" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--6">
+				<img src="/img/Table 01 (14).jpg" alt="Gallery image 6" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--7">
+				<img src="/img/rnd (1).jpg" alt="Gallery image 7" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--8">
+				<img src="/img/Table 01 (4).jpg" alt="Gallery image 8" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--9">
+				<img src="/img/hex (4).jpg" alt="Gallery image 9" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--10">
+				<img src="/img/Table 01 (7).jpg" alt="Gallery image 10" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--13">
+				<img src="/img/Table 06 (3).jpg" alt="Gallery image 13" class="gallery__img" />
+			</figure>
+			<figure class="gallery__item gallery__item--14">
+				<img src="/img/Table 01 (12).jpg" alt="Gallery image 14" class="gallery__img" />
+			</figure>
+		</section>
+		<section class="contact">
+			<div class="row">
+				<form action="#" class="form">
+					<div class="contact__heading">
+						<h2 class="heading-secondary">Get in touch</h2>
+					</div>
+					<div class="form__group">
+						<input type="text" class="form__input" placeholder="Full Name" id="name" required />
+						<label for="name" class="form__label">Full name</label>
+					</div>
 
+					<div class="form__group">
+						<input type="email" class="form__input" placeholder="Email address" id="email" required />
+						<label for="email" class="form__label">Email address</label>
+					</div>
+					<div class="form__group">
+						<button class="btn btn--green">Submit &rarr;</button>
+					</div>
+				</form>
+			</div>
+		</section>
 		<footer class="footer"></footer>
 	</body>
 </html>
