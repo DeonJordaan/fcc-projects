@@ -42,25 +42,29 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem;
-  /*
-	@media only screen and (max-width: $bp-largest) {
-		margin: 0;
-		max-width: 100%;
-		width: 100%;
-	}
-	*/
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
   max-height: 85vh;
-  padding: 3rem;
+  padding: 0;
 }
 
 .header__top {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  width: 120rem;
 }
 
 .header__nav {
@@ -97,7 +101,7 @@ body {
 
 .header-img {
   max-width: 100%;
-  padding-top: 2rem;
+  padding-top: 10rem;
 }
 
 .about {
@@ -183,22 +187,12 @@ p {
 
 .gallery__item--11 {
   grid-row: 6 / span 2;
-  grid-column: 2 / span 2;
+  grid-column: 5 / span 1;
 }
 
 .gallery__item--12 {
-  grid-row: 6 / span 2;
-  grid-column: 4 / span 1;
-}
-
-.gallery__item--13 {
   grid-row: 5 / span 3;
   grid-column: 6 / span 3;
-}
-
-.gallery__item--14 {
-  grid-row: 6 / span 2;
-  grid-column: 5 / span 1;
 }
 
 .gallery__img {
@@ -209,7 +203,9 @@ p {
 }
 
 .contact {
+  position: relative;
   padding: 5rem 0;
+  max-width: 120rem;
   /*
 	@include respond(tab-port) {
 		padding: 10rem 0;
@@ -223,12 +219,31 @@ p {
   padding: 0 0 5rem 0;
 }
 
+.contact__details {
+  font-size: 1.8rem;
+  padding: 0 0 5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact__details__item {
+  line-height: 1.6;
+}
+
 .form {
-  padding: 5rem 3rem;
+  width: 80%;
+  padding: 6rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
+  width: 50%;
 }
 
 .form__input {
@@ -240,7 +255,7 @@ p {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all 0.3s;
   /*
@@ -277,4 +292,41 @@ p {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  background-color: #1ebd60;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.25;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 3.5rem;
+  color: #999;
 }

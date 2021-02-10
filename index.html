@@ -20,19 +20,19 @@
 					<h1 class="header__main--logo">Articulate Furniture</h1>
 					<h2 class="header__main--definition">a(r)'tik-yu-lut/ to express with clarity & effectiveness</h2>
 				</div>
-				<nav class="header__nav">
+				<nav id="nav-bar" class="header__nav">
 					<div class="header__nav--item">
-						<a href="#" class="header__nav--link">
+						<a href="#gallery" class="nav-link header__nav--link">
 							<span>Gallery</span>
 						</a>
 					</div>
 					<div class="header__nav--item">
-						<a href="#" class="header__nav--link">
+						<a href="#about" class="nav-link header__nav--link">
 							<span>About</span>
 						</a>
 					</div>
 					<div class="header__nav--item">
-						<a href="#" class="header__nav--link">
+						<a href="#contact" class="nav-link header__nav--link">
 							<span>Contact</span>
 						</a>
 					</div>
@@ -42,7 +42,7 @@
 				<img src="/img/Website Landing Page.jpg" alt="tables" id="header-img" class="header-img" />
 			</div>
 		</header>
-		<div class="about">
+		<div id="about" class="about">
 			<h2 class="about__heading">About</h2>
 			<p class="about__text">
 				Good design has long captivated me. Most of my career was spent working in the steel manufacturing industry producing and selling
@@ -62,7 +62,7 @@
 			<p class="about__text">My hope is to design pieces that are seen as such. <br /></p>
 			<p class="about__text">- Deon Jordaan -</p>
 		</div>
-		<section class="gallery">
+		<section id="gallery" class="gallery">
 			<figure class="gallery__item gallery__item--1">
 				<img src="/img/Table 01 (11).jpg" alt="Gallery image 1" class="gallery__img" />
 			</figure>
@@ -93,34 +93,45 @@
 			<figure class="gallery__item gallery__item--10">
 				<img src="/img/Table 01 (7).jpg" alt="Gallery image 10" class="gallery__img" />
 			</figure>
-			<figure class="gallery__item gallery__item--13">
-				<img src="/img/Table 06 (3).jpg" alt="Gallery image 13" class="gallery__img" />
+			<figure class="gallery__item gallery__item--11">
+				<img src="/img/Table 01 (12).jpg" alt="Gallery image 11" class="gallery__img" />
 			</figure>
-			<figure class="gallery__item gallery__item--14">
-				<img src="/img/Table 01 (12).jpg" alt="Gallery image 14" class="gallery__img" />
+			<figure class="gallery__item gallery__item--12">
+				<img src="/img/Table 06 (3).jpg" alt="Gallery image 12" class="gallery__img" />
 			</figure>
 		</section>
-		<section class="contact">
-			<div class="row">
-				<form action="#" class="form">
-					<div class="contact__heading">
-						<h2 class="heading-secondary">Get in touch</h2>
-					</div>
-					<div class="form__group">
-						<input type="text" class="form__input" placeholder="Full Name" id="name" required />
-						<label for="name" class="form__label">Full name</label>
-					</div>
+		<section id="contact" class="contact">
+			<div class="bg-video">
+				<video id="video" class="bg-video__content" autoplay muted loop>
+					<source src="img/woodwork.mp4" type="video/mp4" />
+					<!--<source src="img/video.webm" type="video/webm">-->
+					Your browser is not supported!
+				</video>
+			</div>
+			<form action="https://www.freecodecamp.org/email-submit" id="form" class="form">
+				<div class="contact__heading">
+					<h2 class="heading-secondary">Get in touch</h2>
+				</div>
+				<div class="form__group">
+					<input type="text" class="form__input" placeholder="Full Name" id="name" required />
+					<label for="name" class="form__label">Full name</label>
+				</div>
 
-					<div class="form__group">
-						<input type="email" class="form__input" placeholder="Email address" id="email" required />
-						<label for="email" class="form__label">Email address</label>
-					</div>
-					<div class="form__group">
-						<button class="btn btn--green">Submit &rarr;</button>
-					</div>
-				</form>
+				<div class="form__group">
+					<input type="email" class="form__input" placeholder="Email address" id="email" name="email" required />
+					<label for="email" class="form__label">Email address</label>
+				</div>
+				<div class="form__group">
+					<input id="submit" type="submit" class="btn" />
+				</div>
+			</form>
+			<div class="contact__details">
+				<span class="contact__item">Deon Jordaan</span>
+				<span class="contact__item">+27 82 770 2394</span>
+				<span class="contact__item">info@articulatefurniture.com</span>
 			</div>
 		</section>
-		<footer class="footer"></footer>
+		<footer class="footer">&copy; 2021 by Articulate Furniture</footer>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 	</body>
 </html>
