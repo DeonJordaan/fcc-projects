@@ -65,6 +65,7 @@ body {
   align-items: center;
   background-color: #fff;
   width: 120rem;
+  padding: 2rem 2rem 2rem 4rem;
 }
 
 .header__nav {
@@ -101,11 +102,13 @@ body {
 
 .header-img {
   max-width: 100%;
-  padding-top: 10rem;
+  height: auto;
+  padding-top: 18rem;
 }
 
 .about {
-  padding: 4rem 8rem;
+  padding: 12rem 8rem;
+  background-color: #d1d1d1;
   text-align: center;
   min-height: auto;
   max-height: 75vh;
@@ -116,6 +119,7 @@ body {
 
 .about__text {
   font-size: 1.5rem;
+  text-align: left;
 }
 
 h2 {
@@ -132,7 +136,7 @@ p {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 5vw);
   grid-gap: 1.5rem;
-  padding: 3rem 1.5rem;
+  padding: 12rem 1.5rem;
 }
 
 .gallery__item--1 {
@@ -204,7 +208,7 @@ p {
 
 .contact {
   position: relative;
-  padding: 5rem 0;
+  padding: 12rem 0;
   max-width: 120rem;
   /*
 	@include respond(tab-port) {
@@ -216,12 +220,11 @@ p {
 .contact__heading {
   width: 100%;
   text-align: center;
-  padding: 0 0 5rem 0;
 }
 
 .contact__details {
   font-size: 1.8rem;
-  padding: 0 0 5rem 0;
+  padding: 3rem 0 0 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -232,10 +235,12 @@ p {
   line-height: 1.6;
 }
 
+.heading-secondary {
+  margin-bottom: 2rem;
+}
+
 .form {
-  width: 80%;
-  padding: 6rem;
-  margin: 5rem auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
