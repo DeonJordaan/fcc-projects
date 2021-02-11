@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "fcc-tech-doc",
   "version": "1.0.0",
-  "description": "template",
+  "description": "fcc technical documentation page",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

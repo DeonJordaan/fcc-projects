@@ -6,20 +6,403 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap" rel="stylesheet" />
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="img/ayrton-senna-helmet-vector.png" />
 
-		<title id="title">Ayrton Senna - Formula 1's greatest champion</title>
+		<title id="title">Some or other tech</title>
 	</head>
 	<body id="main" class="container">
-		<header class="header"></header>
+		<section class="sidebar-nav">
+			<nav id="navbar" class="sidebar">
+				<header class="header">
+					<h1 class="header">Functions</h1>
+				</header>
+				<ul class="side-nav">
+					<li class="side-nav--item">
+						<a href="#Defining_functions" class="nav-link side-nav--link">Defining functions</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Calling_functions" class="nav-link side-nav--link">Calling functions</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Function_scope" class="nav-link side-nav--link">Function scope</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Scope_and_the_function_stack" class="nav-link side-nav--link">Scope and the function stack</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Closures" class="nav-link side-nav--link">Closures</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Using_the_arguments_object" class="nav-link side-nav--link">Using the arguments object</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Function_parameters" class="nav-link side-nav--link">Function parameters</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Arrow_functions" class="nav-link side-nav--link">Arrow functions</a>
+					</li>
+					<li class="side-nav--item">
+						<a href="#Predefined_functions" class="nav-link side-nav--link">Predefined functions</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<main id="main-doc" class="main-doc">
+			<section class="content">
+				<section id="Defining_functions" class="main-section content__item">
+					<header class="content__item--head">Defining functions</header>
+					<h3 class="content__item--subhead">Function declarations</h3>
+					<p class="content__item--text">
+						A function definition (also called a function declaration, or function statement) consists of the function keyword, followed
+						by:
+					</p>
+					<ul class="content__item--list">
+						<li class="content__item--list--item">The name of the function.</li>
+						<li class="content__item--list--item">
+							A list of parameters to the function, enclosed in parentheses and separated by commas.
+						</li>
+						<li class="content__item--list--item">
+							The JavaScript statements that define the function, enclosed in curly brackets, {...}.
+						</li>
+					</ul>
+					<p class="content__item--text">For example, the following code defines a simple function named square:</p>
+					<code> function square(number) { return number * number; } </code>
+					<p class="content__item--text">
+						The function square takes one parameter, called number. The function consists of one statement that says to return the
+						parameter of the function (that is, number) multiplied by itself. The statement return specifies the value returned by the
+						function:
+					</p>
+					<code> return number * number; </code>
+					<p class="content__item--text">
+						Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the
+						function changes the value of the parameter, this change is not reflected globally or in the calling function.
+					</p>
+					<h3 class="content__item--subhead">Function expressions</h3>
+					<p class="content__item--text">
+						While the function declaration above is syntactically a statement, functions can also be created by a function expression.
+					</p>
+					<p class="content__item--text">
+						Such a function can be anonymous; it does not have to have a name. For example, the function square could have been defined
+						as:
+					</p>
+					<code>const square = function(number) { return number * number } var x = square(4) // x gets the value 16</code>
+					<p class="content__item--text">
+						However, a name can be provided with a function expression. Providing a name allows the function to refer to itself, and also
+						makes it easier to identify the function in a debugger's stack traces:
+					</p>
+					<code>const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) } console.log(factorial(3)) </code>
+					<p class="content__item--text">
+						Function expressions are convenient when passing a function as an argument to another function. The following example shows a
+						map function that should receive a function as first argument and an array as second argument.
+					</p>
+					<code
+						>function map(f, a) { let result = []; // Create a new Array let i; // Declare variable for (i = 0; i != a.length; i++)
+						result[i] = f(a[i]); return result; }
+					</code>
+				</section>
+				<section id="Calling_functions" class="main-section content__item">
+					<header class="content__item--head">Calling functions</header>
+					<p class="content__item--text">
+						Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called.
+					</p>
+					<p class="content__item--text">
+						Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the
+						function square, you could call it as follows:
+					</p>
+					<code>square(5); </code>
+					<p class="content__item--text">
+						The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value
+						25.
+					</p>
+					<p class="content__item--text">
+						Functions must be in scope when they are called, but the function declaration can be hoisted (appear below the call in the
+						code), as in this example:
+					</p>
+					<code>console.log(square(5)); /* ... */ function square(n) { return n * n }</code>
+					<p class="content__item--text">
+						The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
+					</p>
+				</section>
+				<section id="Function_scope" class="main-section content__item">
+					<header class="content__item--head">Function scope</header>
+					<p class="content__item--text">
+						Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined
+						only in the scope of the function. However, a function can access all variables and functions defined inside the scope in
+						which it is defined.
+					</p>
+					<p class="content__item--text">
+						In other words, a function defined in the global scope can access all variables defined in the global scope. A function
+						defined inside another function can also access all variables defined in its parent function, and any other variables to which
+						the parent function has access.
+					</p>
+					<code
+						>// The following variables are defined in the global scope var num1 = 20, num2 = 3, name = 'Chamahk'; // This function is
+						defined in the global scope function multiply() { return num1 * num2; } multiply(); // Returns 60 // A nested function example
+						function getScore() { var num1 = 2, num2 = 3; function add() { return name + ' scored ' + (num1 + num2); } return add(); }
+						getScore(); // Returns "Chamahk scored 5"
+					</code>
+				</section>
+				<section id="Scope_and_the_function_stack" class="main-section content__item">
+					<header class="content__item--head">Scope and the function stack</header>
+					<h3 class="content__item--subhead">Recursion</h3>
+					<p class="content__item--text">
+						A function can refer to and call itself. There are three ways for a function to refer to itself:
+					</p>
 
-		<footer class="footer"></footer>
+					<ul class="content__item--list">
+						<li class="content__item--list--item">The function's name</li>
+						<li class="content__item--list--item">arguments.callee</li>
+						<li class="content__item--list--item">An in-scope variable that refers to the function</li>
+					</ul>
+
+					<p class="content__item--text">For example, consider the following function definition:</p>
+					<code>var foo = function bar() { // statements go here } </code>
+					<h3 class="content__item--subhead">Nested functions and closures</h3>
+					<p class="content__item--text">
+						You may nest a function within another function. The nested (inner) function is private to its containing (outer) function.
+					</p>
+					<p class="content__item--text">
+						It also forms a closure. A closure is an expression (most commonly, a function) that can have free variables together with an
+						environment that binds those variables (that "closes" the expression).
+					</p>
+					<p class="content__item--text">
+						Since a nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its
+						containing function. In other words, the inner function contains the scope of the outer function.
+					</p>
+					<p class="content__item--text">To summarize:</p>
+					<ul class="content__item--list">
+						<li class="content__item--list--item">The inner function can be accessed only from statements in the outer function.</li>
+						<li class="content__item--list--item">
+							The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while
+							the outer function cannot use the arguments and variables of the inner function.
+						</li>
+					</ul>
+					<p class="content__item--text">The following example shows nested functions:</p>
+					<code
+						>function addSquares(a, b) { function square(x) { return x * x; } return square(a) + square(b); } a = addSquares(2, 3); //
+						returns 13 b = addSquares(3, 4); // returns 25 c = addSquares(4, 5); // returns 41
+					</code>
+					<h3 class="content__item--subhead">Preservation of variables</h3>
+					<p class="content__item--text">
+						Notice how x is preserved when inside is returned. A closure must preserve the arguments and variables in all scopes it
+						references. Since each call provides potentially different arguments, a new closure is created for each call to outside. The
+						memory can be freed only when the returned inside is no longer accessible.
+					</p>
+					<p class="content__item--text">
+						This is not different from storing references in other objects, but is often less obvious because one does not set the
+						references directly and cannot inspect them.
+					</p>
+
+					<h3 class="content__item--subhead">Multi-nested functions</h3>
+					<p class="content__item--text">Functions can be multiply-nested. For example:</p>
+					<ul class="content__item--list">
+						<li class="content__item--list--item">A function (A) contains a function (B), which itself contains a function (C).</li>
+						<li class="content__item--list--item">Both functions B and C form closures here. So, B can access A, and C can access B.</li>
+						<li class="content__item--list--item">In addition, since C can access B which can access A, C can also access A.</li>
+					</ul>
+					<p class="content__item--text">
+						Thus, the closures can contain multiple scopes; they recursively contain the scope of the functions containing it. This is
+						called scope chaining. (The reason it is called "chaining" is explained later.)
+					</p>
+					<p class="content__item--text">Consider the following example:</p>
+					<code
+						>function A(x) { function B(y) { function C(z) { console.log(x + y + z); } C(3); } B(2); } A(1); // logs 6 (1 + 2 + 3)
+					</code>
+					<p class="content__item--text">In this example, C accesses B's y and A's x.</p>
+					<p class="content__item--text">This can be done because:</p>
+					<ul class="content__item--list">
+						<li class="content__item--list--item">B forms a closure including A (i.e. B can access A's arguments and variables)</li>
+						<li class="content__item--list--item">C forms a closure including B</li>
+						<li class="content__item--list--item">
+							Because B's closure includes A, C's closure includes A, C can access both B and A's arguments and variables. In other
+							words, C chains the scopes of B and A, in that order.
+						</li>
+					</ul>
+					<p class="content__item--text">
+						The reverse, however, is not true. A cannot access C, because A cannot access any argument or variable of B, which C is a
+						variable of. Thus, C remains private to only B.
+					</p>
+
+					<h3 class="content__item--subhead">Name conflicts</h3>
+					<p class="content__item--text">
+						When two arguments or variables in the scopes of a closure have the same name, there is a name conflict. More nested scopes
+						take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is
+						the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:
+					</p>
+					<code
+						>function outside() { var x = 5; function inside(x) { return x * 2; } return inside; } outside()(10); // returns 20 instead of
+						10
+					</code>
+					<p class="content__item--text">
+						The name conflict happens at the statement return x and is between inside's parameter x and outside's variable x. The scope
+						chain here is {inside, outside, global object}. Therefore, inside's x takes precedences over outside's x, and 20 (inside's x)
+						is returned instead of 10 (outside's x).
+					</p>
+				</section>
+				<section id="Closures" class="main-section content__item">
+					<header class="content__item--head">Closures</header>
+					<p class="content__item--text">
+						Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the
+						inner function full access to all the variables and functions defined inside the outer function (and all other variables and
+						functions that the outer function has access to).
+					</p>
+					<p class="content__item--text">
+						However, the outer function does not have access to the variables and functions defined inside the inner function. This
+						provides a sort of encapsulation for the variables of the inner function.
+					</p>
+					<p class="content__item--text">
+						Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer
+						function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond
+						the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside
+						the outer function.
+					</p>
+					<code
+						>var pet = function(name) { // The outer function defines a variable called "name" var getName = function() { return name; //
+						The inner function has access to the "name" variable of the outer //function } return getName; // Return the inner function,
+						thereby exposing it to outer scopes } myPet = pet('Vivie'); myPet(); // Returns "Vivie"
+					</code>
+				</section>
+				<section id="Using_the_arguments_object" class="main-section content__item">
+					<header class="content__item--head">Using the arguments object</header>
+					<p class="content__item--text">
+						The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to
+						it as follows:
+					</p>
+					<code>arguments[i]</code>
+					<p class="content__item--text">
+						where i is the ordinal number of the argument, starting at 0. So, the first argument passed to a function would be
+						arguments[0]. The total number of arguments is indicated by arguments.length.
+					</p>
+					<p class="content__item--text">
+						Using the arguments object, you can call a function with more arguments than it is formally declared to accept. This is often
+						useful if you don't know in advance how many arguments will be passed to the function. You can use arguments.length to
+						determine the number of arguments actually passed to the function, and then access each argument using the arguments object.
+					</p>
+					<p class="content__item--text">
+						For example, consider a function that concatenates several strings. The only formal argument for the function is a string that
+						specifies the characters that separate the items to concatenate. The function is defined as follows:
+					</p>
+					<code
+						>function myConcat(separator) { var result = ''; // initialize list var i; // iterate through arguments for (i = 1; i <
+						arguments.length; i++) { result += arguments[i] + separator; } return result; }
+					</code>
+				</section>
+				<section id="Function_parameters" class="main-section content__item">
+					<header class="content__item--head">Function parameters</header>
+					<p class="content__item--text">
+						Starting with ECMAScript 2015, there are two new kinds of parameters: default parameters and rest parameters.
+					</p>
+					<h3 class="content__item--subhead">Default parameters</h3>
+
+					<p class="content__item--text">
+						In JavaScript, parameters of functions default to undefined. However, in some situations it might be useful to set a different
+						default value. This is exactly what default parameters do.
+					</p>
+					<h4 class="content__item--subhead">Without default parameters (pre-ECMAScript 2015)</h4>
+
+					<p class="content__item--text">
+						In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a
+						value if they are undefined.
+					</p>
+
+					<p class="content__item--text">
+						In the following example, if no value is provided for b, its value would be undefined when evaluating a*b, and a call to
+						multiply would normally have returned NaN. However, this is prevented by the second line in this example:
+					</p>
+
+					<code>function multiply(a, b) { b = typeof b !== 'undefined' ? b : 1; return a * b; } multiply(5); // 5 </code>
+					<h4 class="content__item--subhead">With default parameters (post-ECMAScript 2015)</h4>
+
+					<p class="content__item--text">
+						With default parameters, a manual check in the function body is no longer necessary. You can put 1 as the default value for b
+						in the function head:
+					</p>
+
+					<code>function multiply(a, b = 1) { return a * b; } multiply(5); // 5</code>
+					<p class="content__item--text">For more details, see default parameters in the reference.</p>
+					<h3 class="content__item--subhead">Rest parameters</h3>
+
+					<p class="content__item--text">The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
+					<p class="content__item--text">
+						In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The
+						function then multiplies these by the first argument .
+					</p>
+					<code
+						>function multiply(multiplier, ...theArgs) { return theArgs.map(x => multiplier * x); } var arr = multiply(2, 1, 2, 3);
+						console.log(arr); // [2, 4, 6]</code
+					>
+				</section>
+				<section id="Arrow_functions" class="main-section content__item">
+					<header class="content__item--head">Arrow functions</header>
+					<p class="content__item--text">
+						An arrow function expression (previously, and now incorrectly known as fat arrow function) has a shorter syntax compared to
+						function expressions and does not have its own this, arguments, super, or new.target. Arrow functions are always anonymous.
+						See also this hacks.mozilla.org blog post: "ES6 In Depth: Arrow functions".
+					</p>
+				</section>
+				<section id="Predefined_functions" class="main-section content__item">
+					<header class="content__item--head">Predefined functions</header>
+					<p class="content__item--text">JavaScript has several top-level, built-in functions:</p>
+					<h5 class="content__item--subhead">eval()</h5>
+					<p class="content__item--text">The eval() method evaluates JavaScript code represented as a string.</p>
+					<h5 class="content__item--subhead">uneval()</h5>
+					<p class="content__item--text">The uneval() method creates a string representation of the source code of an Object.</p>
+					<h5 class="content__item--subhead">isFinite()</h5>
+					<p class="content__item--text">
+						The global isFinite() function determines whether the passed value is a finite number. If needed, the parameter is first
+						converted to a number.
+					</p>
+					<h5 class="content__item--subhead">isNaN()</h5>
+					<p class="content__item--text">
+						The isNaN() function determines whether a value is NaN or not. Note: coercion inside the isNaN function has interesting rules;
+						you may alternatively want to use Number.isNaN(), as defined in ECMAScript 2015, or you can use typeof to determine if the
+						value is Not-A-Number.
+					</p>
+					<h5 class="content__item--subhead">parseFloat()</h5>
+					<p class="content__item--text">The parseFloat() function parses a string argument and returns a floating point number.</p>
+					<h5 class="content__item--subhead">parseInt()</h5>
+					<p class="content__item--text">
+						The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical
+						numeral systems).
+					</p>
+					<h5 class="content__item--subhead">decodeURI()</h5>
+					<p class="content__item--text">
+						The decodeURI() function decodes a Uniform Resource Identifier (URI) previously created by encodeURI or by a similar routine.
+					</p>
+					<h5 class="content__item--subhead">decodeURIComponent()</h5>
+					<p class="content__item--text">
+						The decodeURIComponent() method decodes a Uniform Resource Identifier (URI) component previously created by encodeURIComponent
+						or by a similar routine.
+					</p>
+					<h5 class="content__item--subhead">encodeURI()</h5>
+					<p class="content__item--text">
+						The encodeURI() method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one,
+						two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for
+						characters composed of two "surrogate" characters).
+					</p>
+					<h5 class="content__item--subhead">encodeURIComponent()</h5>
+					<p class="content__item--text">
+						The encodeURIComponent() method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain
+						characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four
+						escape sequences for characters composed of two "surrogate" characters).
+					</p>
+					<h5 class="content__item--subhead">escape()</h5>
+					<p class="content__item--text">
+						The deprecated escape() method computes a new string in which certain characters have been replaced by a hexadecimal escape
+						sequence. Use encodeURI or encodeURIComponent instead.
+					</p>
+					<h5 class="content__item--subhead">unescape()</h5>
+					<p class="content__item--text">
+						The deprecated unescape() method computes a new string in which hexadecimal escape sequences are replaced with the character
+						that it represents. The escape sequences might be introduced by a function like escape. Because unescape() is deprecated, use
+						decodeURI() or decodeURIComponent instead.
+					</p>
+				</section>
+			</section>
+		</main>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 	</body>
 </html>
