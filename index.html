@@ -69,13 +69,15 @@
 						</li>
 					</ul>
 					<p class="content__item--text">For example, the following code defines a simple function named square:</p>
-					<code> function square(number) { return number * number; } </code>
+					<pre><code> function square(number) {
+						return number * number;
+					} </code></pre>
 					<p class="content__item--text">
 						The function square takes one parameter, called number. The function consists of one statement that says to return the
 						parameter of the function (that is, number) multiplied by itself. The statement return specifies the value returned by the
 						function:
 					</p>
-					<code> return number * number; </code>
+					<pre><code> return number * number; </code></pre>
 					<p class="content__item--text">
 						Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the
 						function changes the value of the parameter, this change is not reflected globally or in the calling function.
@@ -88,20 +90,27 @@
 						Such a function can be anonymous; it does not have to have a name. For example, the function square could have been defined
 						as:
 					</p>
-					<code>const square = function(number) { return number * number } var x = square(4) // x gets the value 16</code>
+					<pre><code>const square = function(number) { return number * number }
+								var x = square(4) // x gets the value 16</code></pre>
 					<p class="content__item--text">
 						However, a name can be provided with a function expression. Providing a name allows the function to refer to itself, and also
 						makes it easier to identify the function in a debugger's stack traces:
 					</p>
-					<code>const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) } console.log(factorial(3)) </code>
+					<pre> <code>const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+						console.log(factorial(3)) </code></pre>
 					<p class="content__item--text">
 						Function expressions are convenient when passing a function as an argument to another function. The following example shows a
 						map function that should receive a function as first argument and an array as second argument.
 					</p>
-					<code
-						>function map(f, a) { let result = []; // Create a new Array let i; // Declare variable for (i = 0; i != a.length; i++)
-						result[i] = f(a[i]); return result; }
-					</code>
+					<pre><code
+						>function map(f, a) {
+							let result = []; // Create a new Array
+							let i; // Declare variable
+							for (i = 0; i != a.length; i++)
+								result[i] = f(a[i]);
+							return result;
+						}
+					</code></pre>
 				</section>
 				<section id="Calling_functions" class="main-section content__item">
 					<header class="content__item--head">Calling functions</header>
@@ -112,7 +121,7 @@
 						Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the
 						function square, you could call it as follows:
 					</p>
-					<code>square(5); </code>
+					<pre><code>square(5); </code></pre>
 					<p class="content__item--text">
 						The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value
 						25.
@@ -121,7 +130,9 @@
 						Functions must be in scope when they are called, but the function declaration can be hoisted (appear below the call in the
 						code), as in this example:
 					</p>
-					<code>console.log(square(5)); /* ... */ function square(n) { return n * n }</code>
+					<pre><code>console.log(square(5));
+								/* ... */
+								function square(n) { return n * n }</code></pre>
 					<p class="content__item--text">
 						The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
 					</p>
@@ -138,12 +149,33 @@
 						defined inside another function can also access all variables defined in its parent function, and any other variables to which
 						the parent function has access.
 					</p>
-					<code
-						>// The following variables are defined in the global scope var num1 = 20, num2 = 3, name = 'Chamahk'; // This function is
-						defined in the global scope function multiply() { return num1 * num2; } multiply(); // Returns 60 // A nested function example
-						function getScore() { var num1 = 2, num2 = 3; function add() { return name + ' scored ' + (num1 + num2); } return add(); }
+					<pre>
+					<code>
+						// The following variables are defined in the global scope
+						var num1 = 20,
+						num2 = 3,
+						name = 'Chamahk';
+						
+						// This function is defined in the global scope
+						function multiply() {
+						return num1 * num2;
+						}
+						
+						multiply(); // Returns 60
+						// A nested function example
+						function getScore() {
+							var num1 = 2,
+							num2 = 3;
+							
+						function add() {
+							return name + ' scored ' + (num1 + num2);
+						}
+						
+						return add();
+						}
+
 						getScore(); // Returns "Chamahk scored 5"
-					</code>
+					</code></pre>
 				</section>
 				<section id="Scope_and_the_function_stack" class="main-section content__item">
 					<header class="content__item--head">Scope and the function stack</header>
@@ -159,7 +191,11 @@
 					</ul>
 
 					<p class="content__item--text">For example, consider the following function definition:</p>
-					<code>var foo = function bar() { // statements go here } </code>
+					<pre><code>
+						var foo = function bar() {
+							// statements go here
+						}
+					</code></pre>
 					<h3 class="content__item--subhead">Nested functions and closures</h3>
 					<p class="content__item--text">
 						You may nest a function within another function. The nested (inner) function is private to its containing (outer) function.
@@ -181,10 +217,17 @@
 						</li>
 					</ul>
 					<p class="content__item--text">The following example shows nested functions:</p>
-					<code
-						>function addSquares(a, b) { function square(x) { return x * x; } return square(a) + square(b); } a = addSquares(2, 3); //
-						returns 13 b = addSquares(3, 4); // returns 25 c = addSquares(4, 5); // returns 41
-					</code>
+					<pre><code
+						>function addSquares(a, b) {
+							function square(x) {
+								return x * x;
+							}
+							return square(a) + square(b);
+						}
+						a = addSquares(2, 3); // returns 13
+						b = addSquares(3, 4); // returns 25
+						c = addSquares(4, 5); // returns 41
+					</code></pre>
 					<h3 class="content__item--subhead">Preservation of variables</h3>
 					<p class="content__item--text">
 						Notice how x is preserved when inside is returned. A closure must preserve the arguments and variables in all scopes it
@@ -196,7 +239,7 @@
 						references directly and cannot inspect them.
 					</p>
 
-					<h3 class="content__item--subhead">Multi-nested functions</h3>
+					<h3 class="content__item--subhead">Multiply-nested functions</h3>
 					<p class="content__item--text">Functions can be multiply-nested. For example:</p>
 					<ul class="content__item--list">
 						<li class="content__item--list--item">A function (A) contains a function (B), which itself contains a function (C).</li>
@@ -208,9 +251,18 @@
 						called scope chaining. (The reason it is called "chaining" is explained later.)
 					</p>
 					<p class="content__item--text">Consider the following example:</p>
-					<code
-						>function A(x) { function B(y) { function C(z) { console.log(x + y + z); } C(3); } B(2); } A(1); // logs 6 (1 + 2 + 3)
-					</code>
+					<pre><code>
+						function A(x) {
+							function B(y) {
+								function C(z) {
+									console.log(x + y + z);
+								}
+								C(3);
+							}
+							B(2);
+						}
+						A(1); // logs 6 (1 + 2 + 3)
+					</code></pre>
 					<p class="content__item--text">In this example, C accesses B's y and A's x.</p>
 					<p class="content__item--text">This can be done because:</p>
 					<ul class="content__item--list">
@@ -232,10 +284,17 @@
 						take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is
 						the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:
 					</p>
-					<code
-						>function outside() { var x = 5; function inside(x) { return x * 2; } return inside; } outside()(10); // returns 20 instead of
-						10
-					</code>
+					<pre><code
+						>function outside() {
+							var x = 5;
+							function inside(x) {
+								return x * 2;
+							}
+							return inside;
+						}
+						
+						outside()(10); // returns 20 instead of	10
+					</code></pre>
 					<p class="content__item--text">
 						The name conflict happens at the statement return x and is between inside's parameter x and outside's variable x. The scope
 						chain here is {inside, outside, global object}. Therefore, inside's x takes precedences over outside's x, and 20 (inside's x)
@@ -259,11 +318,18 @@
 						the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside
 						the outer function.
 					</p>
-					<code
-						>var pet = function(name) { // The outer function defines a variable called "name" var getName = function() { return name; //
-						The inner function has access to the "name" variable of the outer //function } return getName; // Return the inner function,
-						thereby exposing it to outer scopes } myPet = pet('Vivie'); myPet(); // Returns "Vivie"
-					</code>
+					<pre><code
+						>var pet = function(name) { // The outer function defines a variable called "name"
+						var getName = function() {
+							return name; 			//The inner function has access to the "name" variable of the outer
+													//function
+							}
+							return getName;			// Return the inner function, thereby exposing it to outer scopes 
+						}
+						myPet = pet('Vivie');
+						
+						myPet();					// Returns "Vivie"
+					</code></pre>
 				</section>
 				<section id="Using_the_arguments_object" class="main-section content__item">
 					<header class="content__item--head">Using the arguments object</header>
@@ -271,7 +337,7 @@
 						The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to
 						it as follows:
 					</p>
-					<code>arguments[i]</code>
+					<pre><code>arguments[i]</code></pre>
 					<p class="content__item--text">
 						where i is the ordinal number of the argument, starting at 0. So, the first argument passed to a function would be
 						arguments[0]. The total number of arguments is indicated by arguments.length.
@@ -285,10 +351,17 @@
 						For example, consider a function that concatenates several strings. The only formal argument for the function is a string that
 						specifies the characters that separate the items to concatenate. The function is defined as follows:
 					</p>
-					<code
-						>function myConcat(separator) { var result = ''; // initialize list var i; // iterate through arguments for (i = 1; i <
-						arguments.length; i++) { result += arguments[i] + separator; } return result; }
-					</code>
+					<pre><code
+						>function myConcat(separator) {
+							var result = ''; // initialize list
+							var i;
+							// iterate through arguments
+							for (i = 1; i < arguments.length; i++) {
+								result += arguments[i] + separator;
+							}
+							return result;
+						}
+					</code></pre>
 				</section>
 				<section id="Function_parameters" class="main-section content__item">
 					<header class="content__item--head">Function parameters</header>
@@ -312,16 +385,28 @@
 						In the following example, if no value is provided for b, its value would be undefined when evaluating a*b, and a call to
 						multiply would normally have returned NaN. However, this is prevented by the second line in this example:
 					</p>
-
-					<code>function multiply(a, b) { b = typeof b !== 'undefined' ? b : 1; return a * b; } multiply(5); // 5 </code>
+					<pre><code>
+						function multiply(a, b) {
+							b = typeof b !== 'undefined' ? b : 1;
+							
+							return a * b;
+						}
+						
+						multiply(5); // 5
+					</code></pre>
 					<h4 class="content__item--subhead">With default parameters (post-ECMAScript 2015)</h4>
 
 					<p class="content__item--text">
 						With default parameters, a manual check in the function body is no longer necessary. You can put 1 as the default value for b
 						in the function head:
 					</p>
-
-					<code>function multiply(a, b = 1) { return a * b; } multiply(5); // 5</code>
+					<pre><code>
+						function multiply(a, b = 1) {
+							return a * b;
+						}
+						
+						multiply(5); // 5
+					</code></pre>
 					<p class="content__item--text">For more details, see default parameters in the reference.</p>
 					<h3 class="content__item--subhead">Rest parameters</h3>
 
@@ -330,10 +415,14 @@
 						In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The
 						function then multiplies these by the first argument .
 					</p>
-					<code
-						>function multiply(multiplier, ...theArgs) { return theArgs.map(x => multiplier * x); } var arr = multiply(2, 1, 2, 3);
-						console.log(arr); // [2, 4, 6]</code
-					>
+					<pre><code>
+						function multiply(multiplier, ...theArgs) {
+							return theArgs.map(x => multiplier * x);
+						}
+						
+						var arr = multiply(2, 1, 2, 3);
+						console.log(arr); // [2, 4, 6]
+					</code></pre>
 				</section>
 				<section id="Arrow_functions" class="main-section content__item">
 					<header class="content__item--head">Arrow functions</header>
