@@ -25,13 +25,25 @@
 		<header class="header">
 			<nav id="navbar" class="header__nav">
 				<ul class="nav">
-					<li class="nav__item">About</li>
-					<li class="nav__item">My work</li>
-					<li class="nav__item">Contact</li>
+					<li class="nav__item">
+						<a href="#welcome" class="nav__link"
+							><span>About</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#projects" class="nav__link"
+							><span>My work</span></a
+						>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link"
+							><span>Contact</span></a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
-		<section id="welcome-section" class="welcome">
+		<section id="welcome" class="welcome">
 			<div class="welcome-text">
 				<h1 class="welcome-text--main">My name is Deon</h1>
 				<h3 class="welcome-text--intro">
@@ -78,18 +90,59 @@
 				/></a>
 			</div>
 		</section>
-		<section>
-			<div class="contact">
-				<a href="https://github.com/DeonJ76" class="contact__link">
-					<svg class="contact__icon">
-						<use xlink:href="img/logo-github.svg"></use>
-					</svg>
-				</a>
-			</div>
-			<div class="contact"><a href="" class="contact"></a></div>
-			<div class="contact"><a href="" class="contact"></a></div>
-			<div class="contact"><a href="" class="contact"></a></div>
-			<div class="contact"><a href="" class="contact"></a></div>
+		<section id="contact" class="contact">
+			<h1 class="contact-list__header">Work with me</h1>
+			<ul class="contact-list">
+				<li class="contact-list__item">
+					<a
+						href="mailto:deon.jordaan76@gmail.com"
+						class="contact-list__link"
+					>
+						<svg class="contact-list__icon">
+							<use
+								xlink:href="img/sprite.svg#icon-mail"
+							></use></svg
+					></a>
+				</li>
+				<li class="contact-list__item">
+					<a
+						href="https://github.com/DeonJ76"
+						class="contact-list__link"
+						><svg class="contact-list__icon">
+							<use
+								xlink:href="img/sprite.svg#icon-github"
+							></use></svg
+					></a>
+				</li>
+				<li class="contact-list__item">
+					<a
+						href="https://www.linkedin.com/in/deonjordaan76/"
+						class="contact-list__link"
+						><svg class="contact-list__icon">
+							<use
+								xlink:href="img/sprite.svg#icon-linkedin"
+							></use></svg
+					></a>
+				</li>
+				<li class="contact-list__item">
+					<a
+						href="https://twitter.com/deonjordaan"
+						class="contact-list__link"
+						><svg class="contact-list__icon">
+							<use
+								xlink:href="img/sprite.svg#icon-twitter"
+							></use></svg
+					></a>
+				</li>
+				<li class="contact-list__item">
+					<a href="tel:+27-82-770-2394" class="contact-list__link"
+						><svg class="contact-list__icon">
+							<use
+								xlink:href="img/sprite.svg#icon-phone"
+							></use></svg
+					></a>
+				</li>
+			</ul>
 		</section>
 		<footer class="footer">&copy; 2021 by Deon Jordaan</footer>
 	</body>
