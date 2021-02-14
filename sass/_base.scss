@@ -1,7 +1,8 @@
-$primary-color-light: #004e92;
-$primary-color-dark: #000428;
+$primary-color-light: #bdc3c7;
+$primary-color-dark: #2c3e50;
+$color-bluegrey: #778ca3;
 $border-color: rgb(175, 172, 172);
-$bg-color: rgb(176, 186, 221);
+$bg-color: #dcdde1;
 
 // #26a0da #314755
 // #2b5876 ;
@@ -13,10 +14,15 @@ $bg-color: rgb(176, 186, 221);
 // #bdc3c7 #2c3e50
 // #000046 #1cb5e0
 // #000428 #004e92
+//#f8f1f1 #11698e3 #19456b #16c79a
 
 html {
 	//This defines what 1rem is
 	font-size: 62.5%; //1rem = 10px; 10px / 16px = 62.5%
+
+	@media only screen and (max-width: 900px) {
+		font-size: 52%;
+	}
 }
 body {
 	font-family: "Montserrat", sans-serif;
@@ -25,14 +31,27 @@ body {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 h1 {
 	font-size: 4rem;
+}
+
+ul {
+	margin: 0;
+}
+
+.container {
+	background-color: $bg-color;
 }
 
 .header {
 	position: sticky;
 	top: 0;
-	min-height: 10vh;
+	//min-height: 10vh;
 	//left: 0;
 	width: 100%;
 	background-color: $bg-color;
@@ -40,14 +59,20 @@ h1 {
 	//height: auto;
 }
 
-.container {
-	background-color: $bg-color;
+.nav-holder {
+	background-color: #d1d8e0;
+	//padding: 0 1rem;
 }
 
 .nav {
+	height: 6vh;
 	display: flex;
 	justify-content: flex-end;
 	padding: 3rem 2rem;
+	background-color: #d1d8e0;
+	color: #40739e;
+	border-radius: 1rem;
+	align-items: center;
 
 	&__item {
 		font-size: 2rem;
@@ -58,14 +83,23 @@ h1 {
 
 .welcome {
 	height: 90vh;
+	width: 95vw;
+	margin: auto;
+	border-radius: 1rem;
+	/*
 	background-image: linear-gradient(
 		to bottom,
 		rgba($primary-color-dark, 0.8),
 		rgba($primary-color-light, 0.8)
-	);
+	);*/
 	background-size: cover;
-	background-position: top;
+	background-position: center;
 	position: relative;
+	justify-content: center;
+	background-color: $color-bluegrey;
+
+	//padding: 1rem;
+	//border-radius: 2rem;
 }
 
 .welcome-text {
@@ -73,12 +107,22 @@ h1 {
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	height: 55rem;
+	width: 55rem;
+	border-radius: 100rem;
+	background-color: $bg-color;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	//align-content: center;
 	animation: appear 3s ease-out;
 	animation-fill-mode: backwards;
 
 	&--intro {
 		font-size: 3rem;
+		margin: 0;
+		padding-bottom: 3rem;
 	}
 }
 
@@ -103,6 +147,11 @@ h1 {
 	//border: 1px solid $border-color;
 	//border-radius: 5px;
 	padding: 0.5rem;
+	transition: transform 0.5s ease;
+
+	&:hover {
+		transform: scale(1.9);
+	}
 }
 
 .projects {
@@ -167,7 +216,7 @@ svg {
 }
 
 .contact {
-	height: 90vh;
+	height: auto;
 	//position: relative;
 	//align-content: center;
 	//align-items: center;

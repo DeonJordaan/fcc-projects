@@ -2,6 +2,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 52%;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -9,27 +15,44 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 h1 {
   font-size: 4rem;
+}
+
+ul {
+  margin: 0;
+}
+
+.container {
+  background-color: #dcdde1;
 }
 
 .header {
   position: sticky;
   top: 0;
-  min-height: 10vh;
   width: 100%;
-  background-color: #b0badd;
+  background-color: #dcdde1;
   z-index: 3;
 }
 
-.container {
-  background-color: #b0badd;
+.nav-holder {
+  background-color: #d1d8e0;
 }
 
 .nav {
+  height: 6vh;
   display: flex;
   justify-content: flex-end;
   padding: 3rem 2rem;
+  background-color: #d1d8e0;
+  color: #40739e;
+  border-radius: 1rem;
+  align-items: center;
 }
 
 .nav__item {
@@ -40,10 +63,20 @@ h1 {
 
 .welcome {
   height: 90vh;
-  background-image: linear-gradient(to bottom, rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 0.8));
+  width: 95vw;
+  margin: auto;
+  border-radius: 1rem;
+  /*
+	background-image: linear-gradient(
+		to bottom,
+		rgba($primary-color-dark, 0.8),
+		rgba($primary-color-light, 0.8)
+	);*/
   background-size: cover;
-  background-position: top;
+  background-position: center;
   position: relative;
+  justify-content: center;
+  background-color: #778ca3;
 }
 
 .welcome-text {
@@ -51,13 +84,22 @@ h1 {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 55rem;
+  width: 55rem;
+  border-radius: 100rem;
+  background-color: #dcdde1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   animation: appear 3s ease-out;
   animation-fill-mode: backwards;
 }
 
 .welcome-text--intro {
   font-size: 3rem;
+  margin: 0;
+  padding-bottom: 3rem;
 }
 
 @keyframes appear {
@@ -76,6 +118,11 @@ h1 {
 
 .project-tile {
   padding: 0.5rem;
+  transition: transform 0.5s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.9);
 }
 
 .projects {
@@ -132,7 +179,7 @@ svg {
 }
 
 .contact {
-  height: 90vh;
+  height: auto;
   padding: 3rem 20rem 12rem 20rem;
 }
 
@@ -159,5 +206,5 @@ svg {
 .footer {
   font-size: 1.5rem;
   padding: 4rem;
-  background-color: #004e92;
+  background-color: #bdc3c7;
 }
