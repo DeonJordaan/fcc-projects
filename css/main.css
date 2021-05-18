@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: normal;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -21,7 +22,8 @@ a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
+  font-weight: 200;
 }
 
 ul {
@@ -29,19 +31,19 @@ ul {
 }
 
 .container {
-  background-color: #dcdde1;
+  background-color: white;
 }
 
 .header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #dcdde1;
+  background-color: white;
   z-index: 3;
 }
 
 .nav-holder {
-  background-color: #d1d8e0;
+  background-color: white;
 }
 
 .nav {
@@ -49,7 +51,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   padding: 3rem 2rem;
-  background-color: #d1d8e0;
+  background-color: white;
   color: #40739e;
   border-radius: 1rem;
   align-items: center;
@@ -76,28 +78,28 @@ ul {
   background-position: center;
   position: relative;
   justify-content: center;
-  background-color: #778ca3;
 }
 
 .welcome-text {
   position: absolute;
   top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0%;
+  transform: translate(0%, -50%);
   height: 55rem;
-  width: 55rem;
   border-radius: 100rem;
-  background-color: #dcdde1;
-  text-align: center;
+  background-color: white;
+  opacity: 1;
+  text-align: right;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: right;
   animation: appear 3s ease-out;
   animation-fill-mode: backwards;
 }
 
 .welcome-text--intro {
-  font-size: 3rem;
+  font-size: 6rem;
+  font-weight: 200;
   margin: 0;
   padding-bottom: 3rem;
 }
@@ -119,10 +121,9 @@ ul {
 .project-tile {
   padding: 0.5rem;
   transition: transform 0.5s ease;
-}
-
-.project-tile:hover {
-  transform: scale(1.9);
+  /*&:hover {
+		transform: scale(1.9);
+	}*/
 }
 
 .projects {
@@ -179,8 +180,11 @@ svg {
 }
 
 .contact {
-  height: auto;
-  padding: 3rem 20rem 12rem 20rem;
+  height: 85vh;
+  width: auto;
+  padding: 12rem 20rem 12rem 20rem;
+  background-size: cover;
+  background-position: center;
 }
 
 .contact-list {
@@ -206,5 +210,4 @@ svg {
 .footer {
   font-size: 1.5rem;
   padding: 4rem;
-  background-color: #bdc3c7;
 }

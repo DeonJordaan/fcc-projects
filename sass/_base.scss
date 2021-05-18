@@ -1,20 +1,8 @@
-$primary-color-light: #bdc3c7;
+$primary-color-light: #f8f1f1;
 $primary-color-dark: #2c3e50;
 $color-bluegrey: #778ca3;
 $border-color: rgb(175, 172, 172);
-$bg-color: #dcdde1;
-
-// #26a0da #314755
-// #2b5876 ;
-// #2193b0 #6dd5ed
-// #1488cc #2b32b2
-//  #076585 #fff
-// #bbd2c5 #536976
-// #00416a #e4e5e6
-// #bdc3c7 #2c3e50
-// #000046 #1cb5e0
-// #000428 #004e92
-//#f8f1f1 #11698e3 #19456b #16c79a
+$bg-color: white;
 
 html {
 	//This defines what 1rem is
@@ -26,6 +14,7 @@ html {
 }
 body {
 	font-family: "Montserrat", sans-serif;
+	font-weight: normal;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -37,7 +26,8 @@ a {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 6rem;
+	font-weight: 200;
 }
 
 ul {
@@ -60,7 +50,7 @@ ul {
 }
 
 .nav-holder {
-	background-color: #d1d8e0;
+	background-color: $bg-color;
 	//padding: 0 1rem;
 }
 
@@ -69,7 +59,7 @@ ul {
 	display: flex;
 	justify-content: flex-end;
 	padding: 3rem 2rem;
-	background-color: #d1d8e0;
+	background-color: $bg-color;
 	color: #40739e;
 	border-radius: 1rem;
 	align-items: center;
@@ -86,6 +76,7 @@ ul {
 	width: 95vw;
 	margin: auto;
 	border-radius: 1rem;
+	// background-image: url("/img/alice-mourou-nliiE9lkYec-unsplash.jpg");
 	/*
 	background-image: linear-gradient(
 		to bottom,
@@ -96,31 +87,34 @@ ul {
 	background-position: center;
 	position: relative;
 	justify-content: center;
-	background-color: $color-bluegrey;
+	//background-color: $color-bluegrey;
 
 	//padding: 1rem;
 	//border-radius: 2rem;
 }
 
 .welcome-text {
+	// font-weight: 100;
 	position: absolute;
 	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	left: 0%;
+	transform: translate(0%, -50%);
 	height: 55rem;
-	width: 55rem;
+	// width: 55rem;
 	border-radius: 100rem;
 	background-color: $bg-color;
-	text-align: center;
+	opacity: 1;
+	text-align: right;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: right;
 	//align-content: center;
 	animation: appear 3s ease-out;
 	animation-fill-mode: backwards;
 
 	&--intro {
-		font-size: 3rem;
+		font-size: 6rem;
+		font-weight: 200;
 		margin: 0;
 		padding-bottom: 3rem;
 	}
@@ -149,9 +143,9 @@ ul {
 	padding: 0.5rem;
 	transition: transform 0.5s ease;
 
-	&:hover {
+	/*&:hover {
 		transform: scale(1.9);
-	}
+	}*/
 }
 
 .projects {
@@ -216,11 +210,15 @@ svg {
 }
 
 .contact {
-	height: auto;
+	height: 85vh;
+	width: auto;
 	//position: relative;
 	//align-content: center;
 	//align-items: center;
-	padding: 3rem 20rem 12rem 20rem;
+	padding: 12rem 20rem 12rem 20rem;
+	// background-image: url("/img/alice-mourou-nliiE9lkYec-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
 .contact-list {
@@ -246,5 +244,5 @@ svg {
 .footer {
 	font-size: 1.5rem;
 	padding: 4rem;
-	background-color: $primary-color-light;
+	// background-color: #1488cc;
 }
