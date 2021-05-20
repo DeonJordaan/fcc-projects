@@ -86,18 +86,17 @@ ul {
   left: 0%;
   transform: translate(0%, -50%);
   height: 55rem;
+  width: 75vw;
   border-radius: 100rem;
   background-color: white;
   opacity: 1;
-  text-align: right;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: right;
-  animation: appear 3s ease-out;
-  animation-fill-mode: backwards;
 }
 
-.welcome-text--intro {
+.welcome-text--main, .welcome-text--intro {
   font-size: 6rem;
   font-weight: 200;
   margin: 0;

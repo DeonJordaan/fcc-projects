@@ -100,18 +100,19 @@ ul {
 	left: 0%;
 	transform: translate(0%, -50%);
 	height: 55rem;
-	// width: 55rem;
+	width: 75vw;
 	border-radius: 100rem;
 	background-color: $bg-color;
 	opacity: 1;
-	text-align: right;
+	text-align: left;
 	display: flex;
 	flex-direction: column;
 	justify-content: right;
 	//align-content: center;
-	animation: appear 3s ease-out;
-	animation-fill-mode: backwards;
+	// animation: appear 3s ease-out;
+	// animation-fill-mode: backwards;
 
+	&--main,
 	&--intro {
 		font-size: 6rem;
 		font-weight: 200;
