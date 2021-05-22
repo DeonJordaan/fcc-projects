@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   box-sizing: border-box;
   padding: 0;
@@ -100,7 +100,10 @@ ul {
   font-size: 6rem;
   font-weight: 200;
   margin: 0;
-  padding-bottom: 3rem;
+}
+
+.border {
+  border-right: 0.3rem solid #777;
 }
 
 @keyframes appear {
