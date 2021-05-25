@@ -12,6 +12,11 @@
 			rel="stylesheet"
 		/>
 
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300&display=swap"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="css/main.css" />
 		<link
 			rel="shortcut icon"
@@ -156,6 +161,67 @@
 				</li>
 			</ul>
 		</section>
+		<div class="code hidden">
+			<div class="code__snippet"></div>
+			<span class="code__snippet--1" data-text-1="type() {"></span>
+			<span class="code__snippet--2" data-text-2="let timer;"></span>
+			<span
+				class="code__snippet--3"
+				data-text-3="const fullText = this.phrase;"
+			></span>
+			<span
+				class="code__snippet--4"
+				data-text-4="this.text = fullText.substring(0, this.text.length + 1);"
+			></span>
+			<span
+				class="code__snippet--5"
+				data-text-5="this.textElement.classList.add('cursor');"
+			></span>
+			<span
+				class="code__snippet--6"
+				data-text-6="this.textElement.innerHTML = `<span>${this.text}</span>`;"
+			></span>
+			<span class="code__snippet--7" data-text-7="let typeSpeed = 100;"></span>
+			<span
+				class="code__snippet--8"
+				data-text-8="timer = setTimeout(() => this.type(), typeSpeed);"
+			></span>
+			<span
+				class="code__snippet--9"
+				data-text-9="if (this.text.length === this.phrase.length) {"
+			></span>
+			<span
+				class="code__snippet--10"
+				data-text-10="clearTimeout(timer);"
+			></span>
+			<span
+				class="code__snippet--11"
+				data-text-11="this.textElement.classList.remove('cursor');"
+			></span>
+			<span class="code__snippet--12" data-text-12="}"></span>
+			<span class="code__snippet--13" data-text-13="}"></span>
+			<span class="code__snippet--14" data-text-14="}"></span>
+		</div>
+		<!-- type() {
+			let timer;
+			const fullText = this.phrase;
+	
+			this.text = fullText.substring(0, this.text.length + 1);
+	
+			this.textElement.classList.add('cursor');
+	
+			this.textElement.innerHTML = `<span>${this.text}</span>`; // class="cursor
+	
+			let typeSpeed = 100;
+	
+			timer = setTimeout(() => this.type(), typeSpeed);
+	
+			if (this.text.length === this.phrase.length) {
+				clearTimeout(timer);
+				this.textElement.classList.remove('cursor');
+			}
+		}
+	} -->
 		<footer class="footer">&copy; 2021 by Deon Jordaan</footer>
 		<script src="./script.js"></script>
 		<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->

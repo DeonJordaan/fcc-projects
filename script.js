@@ -32,6 +32,51 @@ document.addEventListener('DOMContentLoaded', init);
 
 // Init
 function init() {
+	const code1 = document.querySelector('.code__snippet--1');
+	const code2 = document.querySelector('.code__snippet--2');
+	const code3 = document.querySelector('.code__snippet--3');
+	const code4 = document.querySelector('.code__snippet--4');
+	const code5 = document.querySelector('.code__snippet--5');
+	const code6 = document.querySelector('.code__snippet--6');
+	const code7 = document.querySelector('.code__snippet--7');
+	const code8 = document.querySelector('.code__snippet--8');
+	const code9 = document.querySelector('.code__snippet--9');
+	const code10 = document.querySelector('.code__snippet--10');
+	const code11 = document.querySelector('.code__snippet--11');
+	const code12 = document.querySelector('.code__snippet--12');
+	const code13 = document.querySelector('.code__snippet--13');
+	const code14 = document.querySelector('.code__snippet--14');
+
+	const codeSnippet1 = code1.getAttribute('data-text-1');
+	const codeSnippet2 = code2.getAttribute('data-text-2');
+	const codeSnippet3 = code3.getAttribute('data-text-3');
+	const codeSnippet4 = code4.getAttribute('data-text-4');
+	const codeSnippet5 = code5.getAttribute('data-text-5');
+	const codeSnippet6 = code6.getAttribute('data-text-6');
+	const codeSnippet7 = code7.getAttribute('data-text-7');
+	const codeSnippet8 = code8.getAttribute('data-text-8');
+	const codeSnippet9 = code9.getAttribute('data-text-9');
+	const codeSnippet10 = code10.getAttribute('data-text-10');
+	const codeSnippet11 = code11.getAttribute('data-text-11');
+	const codeSnippet12 = code12.getAttribute('data-text-12');
+	const codeSnippet13 = code13.getAttribute('data-text-13');
+	const codeSnippet14 = code14.getAttribute('data-text-14');
+
+	new TypeWriter(code1, codeSnippet1);
+	new TypeWriter(code2, codeSnippet2);
+	new TypeWriter(code3, codeSnippet3);
+	new TypeWriter(code4, codeSnippet4);
+	new TypeWriter(code5, codeSnippet5);
+	new TypeWriter(code6, codeSnippet6);
+	new TypeWriter(code7, codeSnippet7);
+	new TypeWriter(code8, codeSnippet8);
+	new TypeWriter(code9, codeSnippet9);
+	new TypeWriter(code10, codeSnippet10);
+	new TypeWriter(code11, codeSnippet11);
+	new TypeWriter(code12, codeSnippet12);
+	new TypeWriter(code13, codeSnippet13);
+	new TypeWriter(code14, codeSnippet14);
+
 	const greetingElement = document.querySelector('.welcome-text--main');
 	const greeting = greetingElement.getAttribute('data-textGreet');
 	const introElement = document.querySelector('.welcome-text--intro');
@@ -41,204 +86,3 @@ function init() {
 		new TypeWriter(introElement, introduction);
 	}, 2000);
 }
-
-// const greeting = document.getElementById("welcome-greeting");
-// const introduction = document.getElementById("welcome-intro");
-// const greetingPhrase = "Hello, I'm Deon";
-// const introPhrase = "A Frontend Developer";
-
-// let greet = [];
-// let intro = [];
-// let i = 0;
-// let j = 0;
-
-// function typeGreeting() {
-// 	greetingArray = [...greetingPhrase];
-// 	greetingArray.forEach((element) => {
-// 		greeting.textContent = greet[element].join("");
-// 	});
-// 	setTimeout(typeGreeting, 100);
-// }
-
-//FIXME MAYBE WITH A FOR/OF LOOP...FUCK KNOWS
-
-// function typeGreeting() {
-// 	greetingArray = [...greetingPhrase];
-// 	for (const letter of greetingArray) {
-// 		greeting.textContent = greet[letter].join("");
-// 	}
-
-// 	setTimeout(typeGreeting, 100);
-// }
-
-// function loop() {
-// 	for (const button of itemClick)
-// 		button.addEventListener("click", function () {
-// 			console.log("Clicked!!!");
-// 			clickCount++;
-// 			if (clickCount == 1) {
-// 				value1 = button.getAttribute("value");
-// 			}
-// 			if (clickCount >= 2) {
-// 				value2 = button.getAttribute("value");
-// 				clickCount = 0;
-// 				onItemClick();
-// 				loop();
-// 			}
-// 		});
-// }
-
-// loop();
-
-//FIXME
-
-// 	greeting.textContent = greet.join("");
-
-// 	if (i <= greetingArray.length - 1) {
-// 		greet.push(greetingArray[i]);
-// 		i++;
-// 	}
-// 	setTimeout(typeGreeting, 100);
-// }
-
-// function typeIntro() {
-// 	introArray = [...introPhrase];
-// 	introduction.textContent = intro.join("");
-
-// 	if (j <= introArray.length - 1) {
-// 		intro.push(introArray[j]);
-// 		j++;
-// 	}
-
-// 	setTimeout(typeIntro, 100);
-// }
-
-// typeGreeting();
-// typeIntro();
-
-//COMMENT
-// const greeting = document.getElementById("welcome-greeting");
-// const introduction = document.getElementById("welcome-intro");
-// const greetingPhrase = "Hello, I'm Deon";
-// const introPhrase = "A Frontend Developer";
-
-// let greet = [];
-// let intro = [];
-// // let i = 0;
-// // let j = 0;
-
-// function typeGreeting() {
-// 	greetingArray = [...greetingPhrase];
-// 	greeting.textContent = greet.join("");
-
-// 	for (i = 0; i <= greetingArray.length - 1; i++) {
-// 		greet.push(greetingArray[i]);
-// 	}
-
-// 	setTimeout(typeGreeting, 100);
-// }
-
-// function typeIntro() {
-// 	introArray = [...introPhrase];
-// 	introduction.textContent = intro.join("");
-
-// 	for (j = 0; j <= introArray.length - 1; j++) {
-// 		intro.push(introArray[j]);
-// 	}
-
-// 	setTimeout(typeIntro, 100);
-// }
-
-// typeGreeting();
-// typeIntro();
-
-// NOTE  secondFunction(){ firstFunction((response) => { console.log(response); }); }
-
-// COMMENTCOMMENT THIS ONE AT LEAST TYPES THE STRING, AT THE SAME TIME AS IS, WITH A SLIGHT DELAY BETWEEN STARTS WITH ASYNC/AWAIT
-// const greeting = document.getElementById("welcome-greeting");
-// const introduction = document.getElementById("welcome-intro");
-// const greetingPhrase = "Hello, I'm Deon";
-// const introPhrase = "A Frontend Developer";
-// // const speed = Math.random() * (300 - 50) + 50;
-
-// let greet = [];
-// let intro = [];
-// let i = 0;
-// let j = 0;
-
-// async function typeGreeting() {
-// 	greetingArray = [...greetingPhrase];
-// 	greeting.textContent = greet.join("");
-
-// 	if (i <= greetingArray.length - 1) {
-// 		greet.push(greetingArray[i]);
-// 		i++;
-// 	}
-// 	setTimeout(typeGreeting, 100);
-// }
-
-// async function typeIntro() {
-// 	await typeGreeting();
-// 	introArray = [...introPhrase];
-// 	introduction.textContent = intro.join("");
-
-// 	if (j <= introArray.length - 1) {
-// 		intro.push(introArray[j]);
-// 		j++;
-// 	}
-
-// 	setTimeout(typeIntro, 100);
-// }
-
-// typeGreeting();
-// typeIntro();
-
-// COMMENTCOMMENT
-// typeIntro(){ typeGreeting(()=> {
-// 	greetingArray = [...greetingPhrase];
-// 	greeting.textContent = greet.join("");
-
-// 	if (i <= greetingArray.length - 1) {
-// 		greet.push(greetingArray[i]);
-// 		i++;
-// 	}
-// 	setTimeout(typeGreeting, 100);
-// })}
-
-// const greeting = document.getElementById("welcome-greeting");
-// const introduction = document.getElementById("welcome-intro");
-// const greetingPhrase = "Hello, I'm Deon, a Frontend Developer";
-// // const introPhrase = "A Frontend Developer";
-
-// let greet = [];
-// let intro = [];
-// let i = 0;
-// let j = 0;
-
-// function typewriter() {
-// 	greetingArray = [...greetingPhrase];
-
-// 	if (i <= greetingArray.length - 1) {
-// 		greet.push(greetingArray[i]);
-// 		i++;
-// 		console.log(i);
-// 		console.log(greetingArray.length);
-// 	}
-
-// 	greeting.textContent = greet.join("");
-
-// 	// introArray = [...introPhrase];
-
-// 	// if (j <= introArray.length - 1) {
-// 	// 	intro.push(introArray[j]);
-// 	// 	j++;
-// 	// 	console.log(j);
-// 	// 	console.log(introArray.length);
-// 	// }
-
-// 	// introduction.textContent = intro.join("");
-
-// 	setTimeout(typewriter, 100);
-// }
-
-// typewriter();

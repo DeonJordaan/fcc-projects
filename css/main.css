@@ -36,6 +36,7 @@ ul {
 
 .header {
   position: sticky;
+  opacity: 0;
   top: 0;
   width: 100%;
   background-color: white;
@@ -100,8 +101,6 @@ ul {
   text-align: left;
   display: flex;
   flex-direction: column;
-  animation: appear 3s ease-out;
-  animation-fill-mode: backwards;
 }
 
 .welcome-text--main, .welcome-text--intro {
@@ -222,4 +221,32 @@ svg {
 .footer {
   font-size: 1.5rem;
   padding: 4rem;
+}
+
+.code {
+  position: fixed;
+  padding-left: 10rem;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #464343;
+  color: white;
+  z-index: 1000;
+}
+
+.code__snippet--1, .code__snippet--2, .code__snippet--3, .code__snippet--4, .code__snippet--5, .code__snippet--6, .code__snippet--7, .code__snippet--8, .code__snippet--9, .code__snippet--10, .code__snippet--11, .code__snippet--12, .code__snippet--13, .code__snippet--14 {
+  font-size: 3rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.code__snippet--2, .code__snippet--3, .code__snippet--4, .code__snippet--5, .code__snippet--6, .code__snippet--7, .code__snippet--8, .code__snippet--9, .code__snippet--10, .code__snippet--11, .code__snippet--12 {
+  padding-left: 10rem;
+}
+
+.code__snippet--1, .code__snippet--13 {
+  padding-left: 5rem;
 }
