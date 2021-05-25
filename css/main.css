@@ -23,7 +23,7 @@ a {
 
 h1 {
   font-size: 6rem;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 ul {
@@ -47,9 +47,9 @@ ul {
 }
 
 .nav {
-  height: 6vh;
+  height: 2.5vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 3rem 2rem;
   background-color: white;
   color: #40739e;
@@ -57,8 +57,16 @@ ul {
   align-items: center;
 }
 
+.nav__logo {
+  font-size: 3rem;
+  font-weight: 500;
+  list-style: none;
+  padding: 0 2rem;
+}
+
 .nav__item {
   font-size: 2rem;
+  font-weight: 100;
   list-style: none;
   padding: 0 2rem;
 }
@@ -82,27 +90,27 @@ ul {
 
 .welcome-text {
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 0%;
   transform: translate(0%, -50%);
   height: 55rem;
   width: 75vw;
-  border-radius: 100rem;
   background-color: white;
-  opacity: 1;
+  opacity: 0.8;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  animation: appear 3s ease-out;
+  animation-fill-mode: backwards;
 }
 
 .welcome-text--main, .welcome-text--intro {
   font-size: 6rem;
-  font-weight: 200;
+  font-weight: 100;
   margin: 0;
 }
 
-.border {
+.cursor {
   border-right: 0.3rem solid #777;
 }
 
@@ -137,6 +145,8 @@ ul {
   margin: 0 auto;
   grid-gap: 10rem;
   padding: 12rem 6rem;
+  background-image: url("/img/portfolio-background-faded.png");
+  background-size: contain;
 }
 
 .projects__header {

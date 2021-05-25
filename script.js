@@ -12,9 +12,9 @@ class TypeWriter {
 
 		this.text = fullText.substring(0, this.text.length + 1);
 
-		this.textElement.classList.add('border');
+		this.textElement.classList.add('cursor');
 
-		this.textElement.innerHTML = `<span>${this.text}</span>`; // class="border"
+		this.textElement.innerHTML = `<span>${this.text}</span>`; // class="cursor
 
 		let typeSpeed = 100;
 
@@ -22,7 +22,7 @@ class TypeWriter {
 
 		if (this.text.length === this.phrase.length) {
 			clearTimeout(timer);
-			this.textElement.classList.remove('border');
+			this.textElement.classList.remove('cursor');
 		}
 	}
 }

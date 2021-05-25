@@ -27,7 +27,7 @@ a {
 
 h1 {
 	font-size: 6rem;
-	font-weight: 200;
+	font-weight: 100;
 }
 
 ul {
@@ -55,17 +55,26 @@ ul {
 }
 
 .nav {
-	height: 6vh;
+	height: 2.5vh;
+	// width: 50vw;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	padding: 3rem 2rem;
 	background-color: $bg-color;
 	color: #40739e;
 	border-radius: 1rem;
 	align-items: center;
 
+	&__logo {
+		font-size: 3rem;
+		font-weight: 500;
+		list-style: none;
+		padding: 0 2rem;
+	}
+
 	&__item {
 		font-size: 2rem;
+		font-weight: 100;
 		list-style: none;
 		padding: 0 2rem;
 	}
@@ -76,7 +85,7 @@ ul {
 	width: 95vw;
 	margin: auto;
 	border-radius: 1rem;
-	// background-image: url("/img/alice-mourou-nliiE9lkYec-unsplash.jpg");
+	// background-image: url('/img/template.png');
 	/*
 	background-image: linear-gradient(
 		to bottom,
@@ -96,32 +105,32 @@ ul {
 .welcome-text {
 	// font-weight: 100;
 	position: absolute;
-	top: 45%;
+	top: 55%;
 	left: 0%;
 	transform: translate(0%, -50%);
 	height: 55rem;
 	width: 75vw;
-	border-radius: 100rem;
+	// border-radius: 100rem;
 	background-color: $bg-color;
-	opacity: 1;
+	opacity: 0.8;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
-	justify-content: right;
+	// justify-content: right;
 	//align-content: center;
-	// animation: appear 3s ease-out;
-	// animation-fill-mode: backwards;
+	animation: appear 3s ease-out;
+	animation-fill-mode: backwards;
 
 	&--main,
 	&--intro {
 		font-size: 6rem;
-		font-weight: 200;
+		font-weight: 100;
 		margin: 0;
 		// padding-bottom: 3rem;
 	}
 }
 
-.border {
+.cursor {
 	border-right: 0.3rem solid #777;
 }
 
@@ -162,7 +171,8 @@ ul {
 	margin: 0 auto;
 	grid-gap: 10rem;
 	padding: 12rem 6rem;
-	//background-color: $border-color;
+	background-image: url('/img/portfolio-background-faded.png');
+	background-size: contain;
 
 	&__header {
 		grid-column: 1 / 3;
