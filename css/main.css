@@ -127,56 +127,58 @@ ul {
   }
 }
 
-.project-tile {
-  padding: 0.5rem;
-  transition: transform 0.5s ease;
-  /*&:hover {
-		transform: scale(1.9);
-	}*/
-}
-
 .projects {
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  perspective-origin: 0 0;
+  max-width: 80vw;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  max-width: 80vw;
-  align-content: center;
-  margin: 0 auto;
-  grid-gap: 10rem;
-  padding: 12rem 6rem;
   background-image: url("/img/portfolio-background-faded.png");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 .projects__header {
+  max-width: 100vw;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   text-align: center;
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(3);
 }
 
-.projects__tile-1 {
+.projects__tile {
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(3);
+}
+
+.projects__tile--1 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 
-.projects__tile-2 {
+.projects__tile--2 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
-.projects__tile-3 {
+.projects__tile--3 {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
-.projects__tile-4 {
+.projects__tile--4 {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
 
 .projects__tile--image-1, .projects__tile--image-2, .projects__tile--image-3, .projects__tile--image-4 {
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5px;
 }
 
@@ -221,32 +223,4 @@ svg {
 .footer {
   font-size: 1.5rem;
   padding: 4rem;
-}
-
-.code {
-  position: fixed;
-  padding-left: 10rem;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #464343;
-  color: white;
-  z-index: 1000;
-}
-
-.code__snippet--1, .code__snippet--2, .code__snippet--3, .code__snippet--4, .code__snippet--5, .code__snippet--6, .code__snippet--7, .code__snippet--8, .code__snippet--9, .code__snippet--10, .code__snippet--11, .code__snippet--12, .code__snippet--13, .code__snippet--14 {
-  font-size: 3rem;
-  font-family: 'Source Code Pro', monospace;
-}
-
-.code__snippet--2, .code__snippet--3, .code__snippet--4, .code__snippet--5, .code__snippet--6, .code__snippet--7, .code__snippet--8, .code__snippet--9, .code__snippet--10, .code__snippet--11, .code__snippet--12 {
-  padding-left: 10rem;
-}
-
-.code__snippet--1, .code__snippet--13 {
-  padding-left: 5rem;
 }

@@ -70,9 +70,10 @@
 				</h1>
 			</div>
 		</section>
-		<section id="projects" class="projects">
+		<div id="projects" class="projects">
+			<!-- <div class="projects__grid"> -->
 			<h1 class="projects__header">This is what I've built</h1>
-			<div class="project-tile projects__tile-1">
+			<div class="projects__tile--1">
 				<h4 class="projects__tile--header-1">Tribute Website</h4>
 				<a target="_blank" href="https://github.com/DeonJ76/fcc-tribute-page"
 					><img
@@ -81,7 +82,7 @@
 						class="projects__tile--image-1"
 				/></a>
 			</div>
-			<div class="project-tile projects__tile-2">
+			<div class="projects__tile--2">
 				<h4 class="projects__tile--header-2">Product Page</h4>
 				<a target="_blank" href="https://github.com/DeonJ76/fcc-product-page"
 					><img
@@ -90,7 +91,7 @@
 						class="projects__tile--image-2"
 				/></a>
 			</div>
-			<div class="project-tile projects__tile-3">
+			<div class="projects__tile--3">
 				<h4 class="projects__tile--header-3">Survey Form</h4>
 				<a target="_blank" href="https://github.com/DeonJ76/fcc-survey-form"
 					><img
@@ -99,7 +100,7 @@
 						class="projects__tile--image-3"
 				/></a>
 			</div>
-			<div class="project-tile projects__tile-4">
+			<div class="projects__tile--4">
 				<h4 class="projects__tile--header-4">Technical Document</h4>
 				<a target="_blank" href="https://github.com/DeonJ76/fcc-tech-doc"
 					><img
@@ -108,7 +109,8 @@
 						class="projects__tile--image-4"
 				/></a>
 			</div>
-		</section>
+			<!-- </div> -->
+		</div>
 		<section id="contact" class="contact">
 			<h1 class="contact-list__header">Work with me</h1>
 			<ul class="contact-list">
@@ -161,47 +163,55 @@
 				</li>
 			</ul>
 		</section>
-		<div class="code hidden">
-			<div class="code__snippet"></div>
-			<span class="code__snippet--1" data-text-1="type() {"></span>
-			<span class="code__snippet--2" data-text-2="let timer;"></span>
-			<span
-				class="code__snippet--3"
-				data-text-3="const fullText = this.phrase;"
-			></span>
-			<span
-				class="code__snippet--4"
-				data-text-4="this.text = fullText.substring(0, this.text.length + 1);"
-			></span>
-			<span
-				class="code__snippet--5"
-				data-text-5="this.textElement.classList.add('cursor');"
-			></span>
-			<span
-				class="code__snippet--6"
-				data-text-6="this.textElement.innerHTML = `<span>${this.text}</span>`;"
-			></span>
-			<span class="code__snippet--7" data-text-7="let typeSpeed = 100;"></span>
-			<span
-				class="code__snippet--8"
-				data-text-8="timer = setTimeout(() => this.type(), typeSpeed);"
-			></span>
-			<span
-				class="code__snippet--9"
-				data-text-9="if (this.text.length === this.phrase.length) {"
-			></span>
-			<span
-				class="code__snippet--10"
-				data-text-10="clearTimeout(timer);"
-			></span>
-			<span
-				class="code__snippet--11"
-				data-text-11="this.textElement.classList.remove('cursor');"
-			></span>
-			<span class="code__snippet--12" data-text-12="}"></span>
-			<span class="code__snippet--13" data-text-13="}"></span>
-			<span class="code__snippet--14" data-text-14="}"></span>
-		</div>
+		<!-- NOTE -->
+		<!-- <div class="code hidden">
+			<div class="code__snippet typing">
+				<span class="code__snippet--1" data-text-1="type() {">type() {</span>
+				<span class="code__snippet--2" data-text-2="let timer;"
+					>let timer;</span
+				>
+				<span
+					class="code__snippet--3"
+					data-text-3="const fullText = this.phrase;"
+					>const fullText = this.phrase;</span
+				>
+				<span
+					class="code__snippet--4"
+					data-text-4="this.text = fullText.substring(0, this.text.length + 1);"
+				></span>
+				<span
+					class="code__snippet--5"
+					data-text-5="this.textElement.classList.add('cursor');"
+				></span>
+				<span
+					class="code__snippet--6"
+					data-text-6="this.textElement.innerHTML = `<span>${this.text}</span>`;"
+				></span>
+				<span
+					class="code__snippet--7"
+					data-text-7="let typeSpeed = 100;"
+				></span>
+				<span
+					class="code__snippet--8"
+					data-text-8="timer = setTimeout(() => this.type(), typeSpeed);"
+				></span>
+				<span
+					class="code__snippet--9"
+					data-text-9="if (this.text.length === this.phrase.length) {"
+				></span>
+				<span
+					class="code__snippet--10"
+					data-text-10="clearTimeout(timer);"
+				></span>
+				<span
+					class="code__snippet--11"
+					data-text-11="this.textElement.classList.remove('cursor');"
+				></span>
+				<span class="code__snippet--12" data-text-12="}"></span>
+				<span class="code__snippet--13" data-text-13="}"></span>
+				<span class="code__snippet--14" data-text-14="}"></span>
+			</div>
+		</div> -->
 		<!-- type() {
 			let timer;
 			const fullText = this.phrase;
@@ -222,6 +232,7 @@
 			}
 		}
 	} -->
+		<!-- NOTE -->
 		<footer class="footer">&copy; 2021 by Deon Jordaan</footer>
 		<script src="./script.js"></script>
 		<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
