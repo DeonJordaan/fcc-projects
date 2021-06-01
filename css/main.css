@@ -29,7 +29,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,8 +39,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
+  background-color: #fff;
   min-height: 50rem;
 }
 
@@ -65,7 +64,7 @@ body {
   align-items: center;
   background-color: #fff;
   width: 120rem;
-  padding: 2rem 2rem 2rem 4rem;
+  padding: 1rem 1rem 1rem 2rem;
 }
 
 .header__nav {
@@ -103,12 +102,13 @@ body {
 .header-img {
   max-width: 100%;
   height: auto;
-  padding-top: 18rem;
+  padding-top: 14rem;
+  border-radius: 5px;
 }
 
 .about {
   padding: 12rem 8rem;
-  background-color: #d1d1d1;
+  background-color: #fff;
   text-align: center;
   min-height: auto;
   max-height: 75vh;
@@ -136,7 +136,7 @@ p {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 5vw);
   grid-gap: 1.5rem;
-  padding: 12rem 1.5rem;
+  padding: 12rem 0;
 }
 
 .gallery__item--1 {
@@ -304,7 +304,7 @@ p {
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 5px;
   font-size: 1.5rem;
   border: none;
   cursor: pointer;
@@ -312,15 +312,31 @@ p {
   background-color: #1ebd60;
 }
 
-.bg-video {
+.push-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.shadow {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  z-index: -1;
+}
+
+.bg-video {
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
   opacity: 0.25;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .bg-video__content {
