@@ -77,13 +77,74 @@ ul {
 		font-weight: 500;
 		list-style: none;
 		padding: 0 2rem;
+		opacity: 1;
+		transform: translateY(-10rem);
 	}
 
-	&__item {
+	// &__about,
+	// &__projects,
+	// &__contac
+	.nav__item {
 		font-size: 2rem;
 		font-weight: 100;
 		list-style: none;
 		padding: 0 2rem;
+		transform: translateX(100rem);
+	}
+
+	// &__about {
+	// 	transform: translateX(100rem);
+	// }
+	// &__projects {
+	// 	transform: translateX(100rem);
+	// }
+	// &__contact {
+	// 	transform: translateX(100rem);
+	// }
+}
+
+.slide-down {
+	animation: slide-down 2.5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+		scale: 0;
+	}
+
+	90% {
+		scale: 1.1;
+	}
+
+	100% {
+		opacity: 1;
+		scale: 1;
+		transform: translateY(0rem);
+	}
+}
+
+.slide-left {
+	animation: slide-left 2.5s ease-out 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		scale: 0;
+	}
+
+	90% {
+		opacity: 1;
+		scale: 1.1;
+	}
+
+	100% {
+		opacity: 1;
+		scale: 1;
+		transform: translateX(0rem);
 	}
 }
 
@@ -118,10 +179,6 @@ ul {
 	text-align: left;
 	display: flex;
 	flex-direction: column;
-	// justify-content: right;
-	//align-content: center;
-	// animation: appear 3s ease-out;
-	// animation-fill-mode: backwards;
 
 	&--main,
 	&--intro {
@@ -134,23 +191,6 @@ ul {
 
 .cursor {
 	border-right: 0.3rem solid #777;
-}
-
-@keyframes appear {
-	0% {
-		opacity: 0;
-		scale: 0;
-		//transform: translateX(-10rem);
-	}
-
-	90% {
-		scale: 1.1;
-	}
-
-	100% {
-		opacity: 1;
-		scale: 1;
-	}
 }
 
 .projects {
