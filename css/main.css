@@ -157,39 +157,59 @@ ul {
 }
 
 .projects {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  perspective: 8px;
+  perspective-origin: 0%;
   width: 100%;
   height: 100%;
   max-width: 80vw;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 10rem;
+  background-image: url("/img/portfolio-background-faded.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.projects__header {
+.projects__header--text {
+  font-size: 6rem;
   max-width: 100vw;
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
   text-align: center;
+  transform-origin: 0;
+  transform: translateZ(3px) scale(0.625);
+}
+
+.projects__tile {
+  transform-origin: 0;
+  transform: translateZ(3px) scale(0.625);
 }
 
 .projects__tile--1 {
+  width: 40vw;
+  align-self: flex-start;
   grid-column: 1 / 2;
   grid-row: 2 / 5;
 }
 
 .projects__tile--2 {
+  width: 40vw;
+  align-self: flex-end;
   grid-column: 2 / 3;
   grid-row: 4 / 7;
 }
 
 .projects__tile--3 {
+  width: 40vw;
+  align-self: flex-start;
   grid-column: 1 / 2;
   grid-row: 6 / 9;
 }
 
 .projects__tile--4 {
+  width: 40vw;
+  align-self: flex-end;
   grid-column: 2 / 3;
   grid-row: 8 / 11;
 }
