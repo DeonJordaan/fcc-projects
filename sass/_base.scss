@@ -225,7 +225,38 @@ p {
 		height: 100%;
 		object-fit: cover;
 		display: block;
+		cursor: pointer;
 	}
+}
+
+.gallery__carousel {
+	// opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	height: 100vh;
+	width: 100vw;
+	z-index: 10;
+	margin: auto;
+}
+
+.carousel__container {
+	display: flex;
+	box-shadow: 0px px 5px rgba(0, 0, 0, 0.3);
+	height: 80vh;
+	width: 80vw;
+	margin-top: 10vh;
+	margin: auto;
+	overflow: hidden;
+	align-content: center;
+}
+
+.carousel__img {
+	width: 80vw;
+	height: 80vh;
+	object-fit: cover;
 }
 
 .contact {

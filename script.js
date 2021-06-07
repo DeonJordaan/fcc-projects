@@ -1,7 +1,8 @@
 const galleryImages = document.querySelectorAll('.gallery__item');
+const galleryCarousel = document.querySelector('.gallery__carousel');
 
-const snap = function () {
-	console.log('SNAP');
+const showCarousel = function () {
+	galleryCarousel.style.visibility = 'visible';
 };
 
-galleryImages.forEach((item) => item.addEventListener('click', snap));
+galleryImages.forEach((item) => item.addEventListener('click', showCarousel));
