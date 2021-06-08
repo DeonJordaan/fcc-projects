@@ -207,15 +207,21 @@ p {
   cursor: pointer;
 }
 
-.gallery__carousel {
+.carousel__overlay {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
   height: 100vh;
   width: 100vw;
+  background-color: white;
   z-index: 10;
+}
+
+.gallery__carousel {
+  height: 80vh;
+  width: 80vw;
   margin: auto;
+  overflow: hidden;
 }
 
 .hidden {
@@ -224,19 +230,31 @@ p {
 
 .carousel__container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   box-shadow: 0px px 5px rgba(0, 0, 0, 0.3);
   height: 80vh;
-  width: 80vw;
+  width: 100vw;
   margin-top: 10vh;
   margin: auto;
-  overflow: hidden;
-  align-content: center;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel__img {
-  width: 80vw;
-  height: 80vh;
-  object-fit: cover;
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: var(--color-grey-dark-3);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  width: 33%;
 }
 
 .contact {
