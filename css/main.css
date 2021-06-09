@@ -107,7 +107,7 @@ body {
 }
 
 .about {
-  padding: 30rem 8rem 20rem 8rem;
+  padding: 20rem 8rem 10rem 8rem;
   background-color: #fff;
   text-align: center;
   min-height: auto;
@@ -129,6 +129,11 @@ h2 {
 
 p {
   padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .gallery {
@@ -218,7 +223,8 @@ p {
 }
 
 .gallery__carousel {
-  height: 80vh;
+  display: block;
+  height: 90vh;
   width: 80vw;
   margin: auto;
   overflow: hidden;
@@ -230,16 +236,19 @@ p {
 
 .carousel__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-shadow: 0px px 5px rgba(0, 0, 0, 0.3);
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   margin-top: 10vh;
   margin: auto;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
+}
+
+.carousel__img {
+  flex-shrink: 0;
+  min-width: 80vw;
+  object-fit: scale-down;
+  align-items: center;
 }
 
 .buttons-container {
@@ -274,7 +283,7 @@ p {
 }
 
 .contact__details {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 3rem 0 0 0;
   width: 100%;
   display: flex;
