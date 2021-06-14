@@ -86,11 +86,19 @@ ul {
 	// &__contac
 	.nav__item {
 		font-size: 2rem;
-		font-weight: 100;
+		font-weight: 300;
 		list-style: none;
 		padding: 0 2rem;
-		transform: translateX(100rem);
+		opacity: 0;
 	}
+
+	// .nav__about {
+	// transform: translateX(120rem);
+	// }
+
+	// .nav__projects {
+	// transform: translateX(60rem);
+	// }
 
 	// &__about {
 	// 	transform: translateX(100rem);
@@ -114,9 +122,9 @@ ul {
 		scale: 0;
 	}
 
-	90% {
-		scale: 1.1;
-	}
+	// 90% {
+	// 	scale: 1.1;
+	// }
 
 	100% {
 		opacity: 1;
@@ -126,7 +134,7 @@ ul {
 }
 
 .slide-left {
-	animation: slide-left 2.5s ease-out 2s;
+	animation: slide-left 3s ease-out 1s;
 	animation-fill-mode: forwards;
 }
 
@@ -136,15 +144,15 @@ ul {
 		scale: 0;
 	}
 
-	90% {
-		opacity: 1;
-		scale: 1.1;
-	}
+	// 90% {
+	// 	opacity: 1;
+	// 	scale: 1.1;
+	// }
 
 	100% {
 		opacity: 1;
 		scale: 1;
-		transform: translateX(0rem);
+		// transform: translateX(0rem);
 	}
 }
 
@@ -204,9 +212,9 @@ ul {
 	max-width: 80vw;
 	margin: 0 auto;
 
-	background-image: url('/img/portfolio-background-faded.png');
-	background-size: cover;
-	background-position: center;
+	// background-image: url('/img/portfolio-background-faded.png');
+	// background-size: cover;
+	// background-position: center;
 	// background-color: white;
 
 	// &__grid
@@ -290,7 +298,6 @@ ul {
 }
 
 svg {
-	fill: black;
 	z-index: 100;
 }
 

@@ -16,7 +16,7 @@ class TypeWriter {
 
 		this.textElement.innerHTML = `<span>${this.text}</span>`; // class="cursor
 
-		let typeSpeed = 100;
+		let typeSpeed = 75;
 
 		timer = setTimeout(() => this.type(), typeSpeed);
 
@@ -40,7 +40,7 @@ function init() {
 	new TypeWriter(greetingElement, greeting);
 	setTimeout(function () {
 		new TypeWriter(introElement, introduction);
-	}, 2000);
+	}, 1500);
 	// introOverlay();
 }
 
