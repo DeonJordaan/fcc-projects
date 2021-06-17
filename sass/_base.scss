@@ -234,7 +234,9 @@ a {
 	}
 }
 
-.carousel__overlay {
+.overlay {
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -245,46 +247,22 @@ a {
 }
 
 .gallery__carousel {
-	display: block;
-	// position: fixed;
-	// top: 0;
-	// left: 0;
-	// background-color: white;
-	height: 90vh;
+	display: flex;
+	height: 80vh;
 	width: 80vw;
 	margin: auto;
-	// overflow: hidden;
-	// border: 1px solid rgb(85, 85, 85);
+	// margin-bottom: 10vh;
 }
 
 .hidden {
 	visibility: hidden;
 }
 
-.carousel__container {
-	display: flex;
-	// justify-content: center;
-	// align-items: center;
-	// overflow: hidden;
-	// box-shadow: 0px px 5px rgba(0, 0, 0, 0.3);
-	height: 90vh;
-	width: 100vw;
-	margin-top: 10vh;
-	margin: auto;
-	transform: translateX(0);
-	transition: transform 0.5s ease-in-out;
-}
-
-.carousel__img {
-	// z-index: 100;
-	// visibility: visible;
-	flex-shrink: 0;
-	min-width: 80vw;
-	// min-height: 100%;
-	// height: 80vh;
+#image {
+	max-height: 80vh;
+	max-width: 80vw;
 	object-fit: scale-down;
-	// justify-content: center;
-	align-items: center;
+	margin: auto;
 }
 
 .buttons-container {
@@ -292,6 +270,7 @@ a {
 	justify-content: space-between;
 	width: 80%;
 	margin: 0 auto;
+	margin-bottom: 10vh;
 }
 
 .button {
@@ -306,15 +285,10 @@ a {
 	position: relative;
 	padding: 12rem 0;
 	max-width: 120rem;
-	//display: flex;
-	//height: 75vh;
-
-	//background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
 
 	&__heading {
 		width: 100%;
 		text-align: center;
-		//padding: 0 0 5rem 0;
 	}
 
 	&__details {
@@ -323,9 +297,6 @@ a {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		//justify-content: space-evenly;
-		//align-content: center;
-		//align-content: center;
 		text-align: center;
 
 		&__item {
@@ -346,8 +317,6 @@ a {
 
 .form {
 	width: 100%;
-	//padding: 6rem;
-	//margin: 5rem auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -428,7 +397,6 @@ a {
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
-	// filter: blur(0.5px);
 	background: hsla(0, 0%, 0%, 0.25);
 	will-change: transform; //NOTE
 	transform: translateY(2px);
@@ -502,7 +470,6 @@ a {
 	z-index: -1;
 
 	&__content {
-		//position: relative;
 		object-fit: cover;
 		height: 100%;
 		width: 100%;

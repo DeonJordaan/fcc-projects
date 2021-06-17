@@ -1,8 +1,10 @@
+const gallery = document.querySelector('.gallery');
 const galleryImages = document.querySelectorAll('.gallery__item');
-// const galleryWrapper = document.querySelector('.gallery__carousel');
-const carouselImages = document.querySelectorAll('.carousel__img');
-const galleryCarousel = document.getElementById('images');
-const carouselOverlay = document.querySelector('.carousel__overlay');
+const galleryWrapper = document.querySelector('.gallery__carousel');
+// const carouselImages = document.querySelectorAll('.carousel__img');
+// const galleryCarousel = document.querySelector('.carousel__container');
+const overlay = document.querySelector('.overlay');
+let currentImage = document.getElementById('image');
 
 // const buttonContainer = document.querySelector('.buttons-container');
 
@@ -10,85 +12,43 @@ const leftButton = document.getElementById('left');
 const closeButton = document.getElementById('close');
 const rightButton = document.getElementById('right');
 
-const showCarousel = function () {
-	// galleryCarousel.classList.toggle('hidden');
-	carouselOverlay.classList.toggle('hidden');
-	// buttonContainer.classList.toggle('hidden');
-	// galleryWrapper.classList.toggle('hidden');
+let index = 0;
+
+const showCarousel = function (e) {
+	console.log(e);
+	overlay.classList.toggle('hidden');
+	currentImage.src = `/img/${e.target.id}LRG.jpg`;
+	currentImage.alt = `${e.target.alt}`;
+	index = e.target.dataset.number;
+	console.log(index);
+};
+
+const closeCarousel = function () {
+	overlay.classList.toggle('hidden');
 };
 
 galleryImages.forEach((item) => item.addEventListener('click', showCarousel));
 
-closeButton.addEventListener('click', showCarousel);
+closeButton.addEventListener('click', closeCarousel);
 
-let index = 0;
-
-let transition = 0;
-
-// let maxTransition = function () {
-// 	carouselImages.forEach(return +=getBoundingClientRect().width);
-// };
-
-galleryCarousel.style.transform = `translateX${
-	carouselImages[0].getBoundingClientRect().width
-}`;
-
-// let size = 0;
-
-// const size = function (i) {
-// 	i = index;
-// 	carouselImages[i].clientWidth;
-// };
-// let size = carouselImages[0].getBoundingClientRect().width;
-
-function moveImageLeft() {
-	let size = carouselImages[index - 1].getBoundingClientRect().width;
-	transition += size;
-
-	// if (carouselImages[index].id === 'lastClone') {
-	// 	transition = 0;
-	// }
-
-	// for (let i = 0; i < carouselImages.length; i++) {
-	// 	transition += size;
-	// }
-
-	// if (index > carouselImages.length - 1) {
-	// 	index = 0;
-	// } else if (index < 0) {
-	// 	index = carouselImages.length - 1;
-	// }
-
-	galleryCarousel.style.transform = `translateX(${-transition}px)`;
-	console.log(size, transition);
-}
-
-function moveImageRight() {
-	let size = carouselImages[index].getBoundingClientRect().width;
-	transition -= size;
-
-	// for (let i = 0; i < carouselImages.length; i++) {
-	// 	transition += size;
-	// }
-
-	// if (index > carouselImages.length - 1) {
-	// 	index = 0;
-	// } else if (index < 0) {
-	// 	index = carouselImages.length - 1;
-	// }
-
-	galleryCarousel.style.transform = `translateX(${-transition}px)`;
-	console.log(size, transition);
-}
-
-rightButton.addEventListener('click', () => {
+function moveImageLeft(e) {
 	index++;
+	console.log(index);
+}
+
+function moveImageRight(e) {
+	index--;
+	console.log(currentImage);
+	// currentImage.src =
+}
+
+rightButton.addEventListener('click', (e) => {
+	console.log(e);
+
 	moveImageLeft();
-	// console.log(carouselImages.length, index);
 });
 
-leftButton.addEventListener('click', () => {
-	index--;
+leftButton.addEventListener('click', (e) => {
+	console.log(e);
 	moveImageRight();
-	// console.log(carouselImages.length, index);
 });

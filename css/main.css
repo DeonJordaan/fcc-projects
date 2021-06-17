@@ -212,7 +212,9 @@ a {
   cursor: pointer;
 }
 
-.carousel__overlay {
+.overlay {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -223,8 +225,8 @@ a {
 }
 
 .gallery__carousel {
-  display: block;
-  height: 90vh;
+  display: flex;
+  height: 80vh;
   width: 80vw;
   margin: auto;
 }
@@ -233,21 +235,11 @@ a {
   visibility: hidden;
 }
 
-.carousel__container {
-  display: flex;
-  height: 90vh;
-  width: 100vw;
-  margin-top: 10vh;
-  margin: auto;
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel__img {
-  flex-shrink: 0;
-  min-width: 80vw;
+#image {
+  max-height: 80vh;
+  max-width: 80vw;
   object-fit: scale-down;
-  align-items: center;
+  margin: auto;
 }
 
 .buttons-container {
@@ -255,6 +247,7 @@ a {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 10vh;
 }
 
 .button {
