@@ -15,12 +15,10 @@ const rightButton = document.getElementById('right');
 let index = 0;
 
 const showCarousel = function (e) {
-	console.log(e);
 	overlay.classList.toggle('hidden');
-	currentImage.src = `/img/${e.target.id}LRG.jpg`;
-	currentImage.alt = `${e.target.alt}`;
 	index = e.target.dataset.number;
-	console.log(index);
+	currentImage.src = `/img/${e.target.id}.jpg`;
+	currentImage.alt = `${e.target.alt}`;
 };
 
 const closeCarousel = function () {
@@ -33,22 +31,24 @@ closeButton.addEventListener('click', closeCarousel);
 
 function moveImageLeft(e) {
 	index++;
-	console.log(index);
+	if (index === 13) {
+		index = 1;
+	}
+	currentImage.src = `/img/carousel-${index}.jpg`;
 }
 
 function moveImageRight(e) {
 	index--;
-	console.log(currentImage);
-	// currentImage.src =
+	if (index === 0) {
+		index = 12;
+	}
+	currentImage.src = `/img/carousel-${index}.jpg`;
 }
 
 rightButton.addEventListener('click', (e) => {
-	console.log(e);
-
 	moveImageLeft();
 });
 
 leftButton.addEventListener('click', (e) => {
-	console.log(e);
 	moveImageRight();
 });
