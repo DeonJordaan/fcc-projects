@@ -222,7 +222,7 @@
 				id="form"
 				class="form"
 				method="POST"
-				action="contact-form-process.php"
+				action="https://formspree.io/f/xleapewv"
 			>
 				<div class="contact__heading">
 					<h2 class="heading-secondary">Get in touch</h2>
@@ -233,6 +233,7 @@
 						class="form__input"
 						placeholder="Full Name"
 						id="name"
+						name="name"
 						required
 					/>
 					<label for="name" class="form__label">Full name</label>
@@ -244,7 +245,7 @@
 						class="form__input"
 						placeholder="Email address"
 						id="email"
-						name="email"
+						name="_replyto"
 						required
 					/>
 					<label for="email" class="form__label">Email address</label>
@@ -252,9 +253,10 @@
 
 				<div class="form__group">
 					<textarea
-						id="Message"
-						name="Message"
+						id="message"
+						name="message"
 						class="form__input"
+						placeholder="Your message"
 						rows="6"
 						maxlength="300"
 						required
@@ -265,8 +267,9 @@
 
 				<div class="form__group">
 					<button
-						id="submit "
+						id="submitbutton"
 						type="submit"
+						value="Submit"
 						class="btn background-scale push-button"
 					>
 						<span class="shadow"></span>

@@ -52,3 +52,10 @@ rightButton.addEventListener('click', (e) => {
 leftButton.addEventListener('click', (e) => {
 	moveImageRight();
 });
+
+// CLear contact form input values upon submission
+window.onbeforeunload = () => {
+	for (const form of document.getElementsByTagName('form')) {
+		form.reset();
+	}
+};
