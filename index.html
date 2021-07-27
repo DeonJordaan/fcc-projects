@@ -218,7 +218,12 @@
 					Your browser is not supported!
 				</video>
 			</div>
-			<form id="form" class="form">
+			<form
+				id="form"
+				class="form"
+				method="POST"
+				action="contact-form-process.php"
+			>
 				<div class="contact__heading">
 					<h2 class="heading-secondary">Get in touch</h2>
 				</div>
@@ -244,9 +249,23 @@
 					/>
 					<label for="email" class="form__label">Email address</label>
 				</div>
+
+				<div class="form__group">
+					<textarea
+						id="Message"
+						name="Message"
+						class="form__input"
+						rows="6"
+						maxlength="300"
+						required
+					></textarea>
+
+					<label for="Message" class="form__label">Your message</label>
+				</div>
+
 				<div class="form__group">
 					<button
-						d="submit "
+						id="submit "
 						type="submit"
 						class="btn background-scale push-button"
 					>
