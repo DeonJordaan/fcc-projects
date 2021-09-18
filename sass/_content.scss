@@ -1,0 +1,221 @@
+.header {
+	background-color: $color-grey-light-2;
+	grid-column: 1 / span 10;
+	grid-row: head-start / head-end;
+	height: 75vh;
+	background-image: url(../img/Senna.png);
+	box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	@media only screen and (max-width: $bp-lrg) {
+		background-position: 20% 0;
+	}
+
+	@media only screen and (max-width: $bp-med) {
+		background-position: 30% 0;
+	}
+
+	&__text {
+		color: white;
+
+		&--main {
+			display: block;
+			font-size: 6rem;
+			color: $color-yellow;
+			position: absolute;
+			top: 2.5rem;
+			left: 3rem;
+			backface-visibility: hidden;
+
+			animation-name: moveInRight;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-out;
+			animation-fill-mode: backwards;
+		}
+
+		&--sub {
+			display: block;
+			font-size: 12rem;
+			color: $color-green;
+			position: absolute;
+			top: 5rem;
+			left: 10rem;
+			backface-visibility: hidden;
+
+			animation-name: moveInRight;
+			animation-delay: 0.5s;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-out;
+			animation-fill-mode: backwards;
+		}
+	}
+
+	&__caption {
+		font-size: 1.2rem;
+		font-weight: 200;
+		color: #ffffff;
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+
+		a:link {
+			color: #ffffff;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: yellow;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: red;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		a:active {
+			color: #ffffff;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+	}
+}
+
+.stats {
+	grid-row: full-start / stats-end;
+	grid-column: 2 / 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 6rem 0;
+	text-align: center;
+	font-weight: 400;
+
+	@media only screen and (max-width: $bp-lrg) {
+		font-size: 3;
+	}
+
+	&__1 {
+		color: $color-yellow;
+
+		&--num {
+			font-size: 5rem;
+		}
+		&--text {
+			font-size: 3.5rem;
+		}
+	}
+
+	&__2 {
+		color: $color-green;
+
+		&--num {
+			font-size: 5rem;
+		}
+		&--text {
+			font-size: 3.5rem;
+		}
+		color: $color-green;
+	}
+
+	&__3 {
+		color: $color-yellow;
+
+		&--num {
+			font-size: 5rem;
+		}
+		&--text {
+			font-size: 3.5rem;
+		}
+	}
+
+	&__4 {
+		color: $color-green;
+
+		&--num {
+			font-size: 5rem;
+		}
+		&--text {
+			font-size: 3.5rem;
+		}
+	}
+}
+
+.intro {
+	grid-column: 2 / 10;
+	grid-row: stats-end / content-start;
+	padding: 5rem 0;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.timeline {
+	grid-column: 3 / 9;
+	grid-row: content-start / content-end;
+	display: block;
+	justify-content: center;
+
+	&__year {
+		font-size: 1.5rem;
+		font-weight: 400;
+		//transform: translateX(-2rem);
+	}
+
+	&__description {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	&__content {
+		font-size: 1.5rem;
+		padding: 1.5rem 0 4rem 0;
+	}
+
+	/*
+	&__event {
+		:hover {
+			transform: scale(1.025);
+			transition: all 1s ease-out;
+		}
+	}
+	*/
+}
+
+.img-div {
+	grid-column: 1 / -1;
+	grid-row: image-start / image-end;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__img {
+		max-width: 100vw;
+	}
+
+	&__caption {
+		align-self: center;
+	}
+}
+
+.tribute-link {
+	font-size: 2rem;
+	grid-column: 1 / -1;
+	grid-row: image-end / foot-start;
+	display: flex;
+	justify-content: center;
+	padding: 6rem 0;
+}
+
+.footer {
+	font-size: 1.3rem;
+	grid-column: 1 / -1;
+	grid-row: foot-start / full-end;
+	display: grid;
+	justify-content: center;
+}
